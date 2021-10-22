@@ -1,3 +1,4 @@
+UIBar.destroy();
 if (document.location.href.toLowerCase().includes("/temp/") || document.location.href.toLowerCase().includes("/private/") || hasOwnProperty.call(window, "storyFormat")) {
 	// Change this to the path where the HTML file is
 	// located if you want to run this from inside Twine.
@@ -7,6 +8,7 @@ if (document.location.href.toLowerCase().includes("/temp/") || document.location
 }
 setup.ImagePath = setup.Path + "images/";
 setup.SoundPath = setup.Path + "sounds/";
+setup.FontPath = setup.Path + "fonts/";
 
 /* speech macro - Start */
 Macro.add('speech', {
@@ -15,8 +17,13 @@ Macro.add('speech', {
 		var id = this.args[0], name = id;
 		if (this.args.length > 1) name = this.args[1];
 		var output = '<div class="speech ' + id + '">';
-		output += '<span class="avatar"></span>';
-		output += name + '<hr>' + this.payload[0].contents + '</div>';
+        if (!name) {
+            output += this.payload[0].contents + '</div>'
+        } 
+        else {
+            output += '<span class="avatar"></span>';
+		    output += name + '<hr>' + this.payload[0].contents + '</div>';
+        }
 		$(this.output).wiki(output);
 	}
 });
@@ -124,7 +131,7 @@ Macro.add('dialogclose', {
     var options = {
         tryGlobal : true,
         defaultStrings : {
-            empty     : 'The inventory is empty...',
+            empty     : 'Your inventory is Empty',
             listDrop  : 'Discard',
             separator : '\n'
         }
@@ -669,5 +676,21 @@ Macro.add('dialogclose', {
                 .appendTo(this.output);
         }
     });
-
+    $(document).on('click', ".speech", function () {
+        var show = State.temporary.show;
+        var el;
+        if (show.start < show.end) {
+            el = '#next' + show.start;
+            $(el).fadeOut();
+            show.start++;
+            el = '#next' + show.start;
+            $(el).fadeIn();
+        }
+        else {
+            $("#continue").fadeIn();
+        }
+    });
+    // $(document).on(':typingstop', function (ev) {
+    //     console.log("DONE");
+    // });
 }());
