@@ -1066,8 +1066,9 @@ There&#39;s a treasure chest in this room!
 &lt;&lt;/link&gt;&gt;
 
 [[Continue|Settings2]]</tw-passagedata><tw-passagedata pid="5" name="Notify Letter" tags="" position="750,475" size="100,100">Good afternoon &lt;&lt;print $name&gt;&gt;, we have a letter for you.
-[[open letter]]</tw-passagedata><tw-passagedata pid="6" name="StoryInit" tags="" position="469,173" size="100,100">&lt;&lt;newinventory &#39;$player&#39;&gt;&gt;
-&lt;&lt;newinventory &#39;$container&#39; &#39;hammer&#39; &#39;knife&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Settings2" tags="" position="403,457" size="100,100">In this passage, we&#39;ll give the user the opportunity to pick up or drop some items into a chest.
+[[open letter]]</tw-passagedata><tw-passagedata pid="6" name="StoryInit" tags="" position="360,64" size="100,100">&lt;&lt;newinventory &#39;$player&#39;&gt;&gt;
+&lt;&lt;newinventory &#39;$container&#39; &#39;hammer&#39; &#39;knife&#39;&gt;&gt;
+&lt;&lt;cacheaudio &quot;start_song&quot; &quot;music/I-Knew-a-Guy.mp3&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Settings2" tags="" position="403,457" size="100,100">In this passage, we&#39;ll give the user the opportunity to pick up or drop some items into a chest.
 
 There&#39;s a treasure chest in this room!
 
@@ -1156,7 +1157,9 @@ Dear &lt;&lt;print $name&gt;&gt;,
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link &#39;Continue&#39;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Introduction" tags="" position="623,52" size="100,100">&lt;&lt;timed 2s&gt;&gt;
 	&lt;&lt;goto &quot;Title Screen&quot;&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
-&lt;introduction&gt;bootleg intro&lt;/introduction&gt; </tw-passagedata><tw-passagedata pid="14" name="Lust Dialogue" tags="" position="614,884" size="100,100">&lt;div&gt;
+&lt;introduction&gt;bootleg intro&lt;/introduction&gt; 
+&lt;&lt;audio start_song play&gt;&gt;
+</tw-passagedata><tw-passagedata pid="14" name="Lust Dialogue" tags="" position="614,884" size="100,100">&lt;div&gt;
 &lt;&lt;speech &quot;Lust&quot;&gt;&gt;I&#39;m Lust...&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;&lt;button [[&quot;Sloth&quot;|Sloth Dialogue]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="Sloth Dialogue" tags="" position="614,1034" size="100,100">&lt;div&gt;
