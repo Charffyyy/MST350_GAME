@@ -679,6 +679,7 @@ Macro.add('dialogclose', {
     $(document).on('click', ".speech", function () {
         var show = State.temporary.show;
         var el;
+        try {
         if (show.start < show.end) {
             el = '#next' + show.start;
             $(el).fadeOut();
@@ -689,8 +690,23 @@ Macro.add('dialogclose', {
         else {
             $("#continue").fadeIn();
         }
+    }
+    catch(error) {
+        $("#continue").fadeIn();
+    }
     });
-    // $(document).on(':typingstop', function (ev) {
-    //     console.log("DONE");
-    // });
+    $(document).on(':typingstop', function (ev) {
+        try{
+            var dialogueExists = $("next0");
+            if (dialogueExists) {
+                dialogue.show();
+            }
+            else {
+                $("#continue").fadeIn();
+            }
+        }
+        catch(error) {
+            $("#continue").fadeIn();
+        }
+    });
 }());
