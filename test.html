@@ -467,13 +467,13 @@ a:hover {
   100% {
     opacity:0;
 }
-  					/* fade in effect */
+				/* fade in effect */
 .fade-in {
-  animation: fadeIn ease 8s;
-  -webkit-animation: fadeIn ease 8s;
-  -moz-animation: fadeIn ease 8s;
-  -o-animation: fadeIn ease 8s;
-  -ms-animation: fadeIn ease 8s;
+  animation: fadeIn ease 3s;
+  -webkit-animation: fadeIn ease 3s;
+  -moz-animation: fadeIn ease 3s;
+  -o-animation: fadeIn ease 3s;
+  -ms-animation: fadeIn ease 3s;
 }
 @keyframes fadeIn {
   0% {
@@ -1230,6 +1230,12 @@ Macro.add('dialogclose', {
         }
     });
 }());
+
+
+postdisplay['fadeIn-text'] = function (taskName) {
+	$('.fadeIn').hide().fadeIn(4000);
+    // change 10000 to whatever time you want, in milliseconds
+};
 </script><tw-passagedata pid="1" name="Start Game" tags="" position="922,284" size="100,100">Good afternoon Mr. 
 &lt;&lt;textbox &quot;$name&quot; &quot; &quot;&gt;&gt;
 &lt;&lt;button [[&quot;Continue&quot;|Notify Letter]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="open letter" tags="" position="728,376" size="100,100">&lt;&lt;timed 2.4s&gt;&gt;
@@ -1353,13 +1359,13 @@ Dear &lt;&lt;print $name&gt;&gt;,
 &lt;&lt;audio letter_music stop&gt;&gt;
 &lt;&lt;audio start_music play&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Introduction" tags="" position="624,47" size="100,100">&lt;introduction&gt;
 &lt;span class=&quot;intro-text&quot;&gt;The BIG&lt;/span&gt;
-&lt;div class = &#39;fade-in&#39;&gt;
-	&lt;img src=&quot;images/logoCropped.gif&quot;&gt;
-&lt;/div&gt;
+
+&lt;span&gt;&lt;img src=&quot;images/logoCropped.gif&quot;&gt;&lt;/span&gt;
+
 &lt;span class=&quot;intro-text&quot; style=&quot;position:relative; bottom:60px&quot;&gt;Presents&lt;/span&gt;
 &lt;/introduction&gt; 
 
-&lt;&lt;timed 5.2s&gt;&gt;
+&lt;&lt;timed 3.2s&gt;&gt;
 	&lt;&lt;goto &quot;Title Screen&quot;&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 
@@ -1409,7 +1415,9 @@ Dear &lt;&lt;print $name&gt;&gt;,
     &lt;&lt;/dialog&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion2]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="Next" tags="" position="852,895" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="18" name="Mansion2" tags="" position="1140,894" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion2]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="Next" tags="" position="852,895" size="100,100">&lt;div class = &#39;fade-in&#39;&gt;
+	hello
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="18" name="Mansion2" tags="" position="1140,894" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Once reaching the top of the stairs, I come face to face with a large, golden, orante knocker that seems to nearly rattle the doors off the hinges as I use it.
 
 “Ah, Mr. Atomic, quite nice to finally meet you!” says quite clearly a greeter, a large smile plastered across his face.
