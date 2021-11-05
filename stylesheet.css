@@ -1,0 +1,377 @@
+/* SugarCube */
+
+/* Fonts - Start */
+@import url("https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise:30");
+@import url("https://fonts.googleapis.com/css?family=Reenie+Beanie:30");
+@import url("https://fonts.googleapis.com/css?family=VT323&display=swap");
+@font-face {
+	/* Font source: http://sensi.org/~svo/glasstty/ */
+	font-family: Glass;
+	src: url("fonts/Glass_TTY_VT220.eot");
+	src: url("fonts/Glass_TTY_VT220.eot?#iefix") format("embedded-opentype"),
+		 url("fonts/Glass_TTY_VT220.woff2") format("woff2"),
+		 url("fonts/Glass_TTY_VT220.woff") format("woff"),
+		 url("fonts/Glass_TTY_VT220.svg#Glass_TTY_VT220") format("svg"),
+		 url("fonts/Glass_TTY_VT220.ttf") format("truetype"),
+		 url("file://C:/Games/MyGame/Glass_TTY_VT220.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	/* Font source: http://sensi.org/~svo/glasstty/ */
+	font-family: custom1;
+  	src:
+	  url("fonts/pixel.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+/* Fonts - End */
+
+/* Variables */
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --green: #99d98c;
+}
+body {
+  overflow: hidden; /* Hide scrollbars */
+  font-size: 125%;
+}
+
+hr {
+  margin: 0.3em 0;
+}
+a{
+  color:Blue;
+}
+a:hover{
+  color: DeepPink;
+}
+
+button {
+  transition-duration: 0.4s;
+  
+}
+
+.game-logo {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+
+introduction img{
+	display: block;
+	margin: 0 auto;
+  	width: 500px;
+}
+
+.intro-text {
+  font-family: VT323, monospace;
+  font-size:80px;
+  color: gold;
+}
+
+introduction {
+  	display: block;
+  	text-align: center;
+  	font-size: 25px;
+}
+
+.title-button button {
+  width:400px;
+  height:30%;
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: custom1, VT323, monospace;
+}
+.title-button button:hover {
+  background-color: white;
+  border: 2px solid black;
+  color: black;
+}
+
+.absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 50px;
+  	font-family: Glass, VT323;
+  	color: #0abde3;
+}
+
+.center-img {
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+
+
+.inventory a {
+  font-family: Glass, VT323, monospace;
+  position: absolute;
+  bottom: 2%;
+  color: #a3ff99;
+  text-shadow: 0px 0px 20px #5dff4b;
+  text-decoration: underline;
+}
+a {
+  color: #a3ff99;
+  text-shadow: 0px 0px 20px #5dff4b;
+  text-decoration: underline;
+}
+a:hover {
+  color: #20bf6b;
+  text-shadow: 0px 0px 20px #26de81;
+}
+
+#continue a {
+  font-family: Glass, VT323, monospace;
+  position: absolute;
+  right: 13%;
+  bottom: 2%;
+}
+#chooseCulprit a {
+  font-family: Glass, VT323, monospace;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+  bottom: 2%;
+}
+
+/* Paper - Start */
+.paperheader {
+	background-color: #E0D2C3;
+	margin-top: -5px;
+	margin-left: -42px;
+	min-height: 60px;
+	padding-left: 42px;
+}
+.paper {
+	font: bold italic 25px "Waiting for the Sunrise";
+	line-height: 25px;
+	position: relative;
+	margin: 0 auto;
+	padding: 8px 5px 4px 42px;
+	color: #444;
+  	background: #E0D2C3;
+	-webkit-background-size: 100% 20px;
+	   -moz-background-size: 100% 20px;
+		-ms-background-size: 100% 20px;
+		 -o-background-size: 100% 20px;
+			background-size: 100% 20px;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+			border-radius: 3px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+	   -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+			box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+}
+.paper::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 30px;
+	width: 4px;
+	bottom: 0;
+}
+.papertext {
+	display: inline-block;
+	position: relative;
+	top: 4px;
+}
+/* Paper - End */
+
+/* main story dialog - Start */
+.storyDialog {
+	font-family: Glass, VT323, monospace;
+	line-height: 25px;
+    color: #a3ff99;
+  	text-shadow: 0px 0px 20px #5dff4b;
+  	font-size: 28px;
+  	height: 420px;
+    border: 4px double white;
+	position: relative;
+	margin: 0 auto;
+	padding: 8px 5px 4px 8px;
+	-webkit-background-size: 100% 20px;
+	   -moz-background-size: 100% 20px;
+		-ms-background-size: 100% 20px;
+		 -o-background-size: 100% 20px;
+			background-size: 100% 20px;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+			border-radius: 3px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+	   -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+			box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+}
+.storyDialog::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 30px;
+	width: 4px;
+	bottom: 0;
+}
+/* speech macro - Start */
+.gameDialog {
+	border: 2px solid white;
+	border-radius: 5px;
+	padding: 8px 8px 8px 8px;
+	box-shadow: 5px 5px 3px Black;
+  	position: fixed;
+	max-width: 1125px;
+  	width: 73.5%;
+  	bottom: 8%;
+  	min-height: 140px;
+    color: #a3ff99;
+  	text-shadow: 0px 0px 20px #5dff4b;
+	font-family: Glass, VT323, monospace;
+	font-size: 28px;
+	line-height: 26px;
+}
+
+/* speech macro - Start */
+.speech {
+	border: 2px solid white;
+	border-radius: 5px;
+	padding: 8px 8px 8px 8px;
+	box-shadow: 5px 5px 3px Black;
+  	position: fixed;
+	max-width: 1125px;
+  	width: 73.5%;
+  	bottom: 8%;
+  	min-height: 140px;
+    color: #a3ff99;
+  	text-shadow: 0px 0px 20px #5dff4b;
+	font-family: Glass, VT323, monospace;
+	font-size: 20px;
+	line-height: 22px;
+}
+.speech linkText {
+  color: #fff;
+}
+.speech:hover {
+  cursor: pointer
+}
+.avatar {
+	display: block;
+	padding: 1px;
+	height: 120px;
+	width: 120px;
+	float: left;
+	margin: 8px 15px 0px 0px;
+	border: 2px outset white;
+	border-radius: 5px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+
+.Narrator .speech{
+  background-color: #000;
+}
+.Green {
+  	color: #006600
+  	text-shadow: 0px 0px 20px #009900;
+	border: 2px solid green;
+}
+.Green .avatar {
+	background-image: URL("images/mrGreenCropped.png");
+  	border-color: green;
+}
+.Lucy {
+  	color: #9980FA;
+    border: 2px solid #9980FA;
+  	text-shadow: 0px 0px 20px #D980FA;
+  	filter: brightness(1.2);
+}
+.Lucy .avatar {
+	background-image: URL("images/lustCropped.png");
+    border-color: #9980FA;
+}
+.Silas {
+  	color:  #e6b800;
+  	text-shadow: 0px 0px 20px #feca57;
+    border: 2px dashed gold;
+
+}
+.Silas .avatar {
+	background-image: URL("images/slothCropped.png");
+    border-color: gold;
+}
+.William {
+  	color: #f53b57;
+  	text-shadow: 0px 0px 20px #ef5777;
+    border-color: #f53b57;
+
+}
+.William .avatar {
+	background-image: URL("images/croppedWrath.png");
+    border-color: #f53b57;
+}
+.Georgia {
+  	color: #D980FA;
+  	text-shadow: 0px 0px 20px #FDA7DF;
+    border-color: #D980FA;
+
+}
+.Georgia .avatar {
+	background-image: URL("images/croppedGluttony.png");
+    border-color: #D980FA;
+}
+
+.Piper {
+  	color: #0fbcf9;
+  	text-shadow: 0px 0px 20px #4bcffa;
+    border-color: #0fbcf9;
+
+}
+.Piper .avatar {
+	background-image: URL("images/croppedPride.png");
+    border-color: #0fbcf9;
+}
+
+#choosePiper a {
+	color: #0fbcf9;
+	text-shadow: 0px 0px 20px #4bcffa;
+    position: absolute;
+    left: 11%;
+    bottom: 25%;
+}
+#chooseWilliam a {
+	color: #f53b57;
+	text-shadow: 0px 0px 20px #ef5777;
+	position: absolute;
+    left: 28%;
+    bottom: 25%;
+}
+#chooseLucy a {
+	color: #9980FA;
+  	text-shadow: 0px 0px 20px #D980FA;
+  	filter: brightness(1.2);
+	position: absolute;
+    left: 49%;
+    bottom: 25%;
+}
+#chooseGeorgia a {
+	color: #D980FA;
+	text-shadow: 0px 0px 20px #FDA7DF;
+	position: absolute;
+    left: 65%;
+    bottom: 25%;
+}
+#chooseV a {
+	color: #B53471;
+	text-shadow: 0px 0px 20px #ED4C67;
+	position: absolute;
+    left: 88%;
+    bottom: 25%;
+}
+
+.hide { display: none; }
+/* speech macro - End */

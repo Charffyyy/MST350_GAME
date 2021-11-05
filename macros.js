@@ -690,9 +690,15 @@ Macro.add('dialogclose', {
         }
         else {
             $("#continue").fadeIn();
+            if (state.active.variables.player.count() > 0) {
+                $("#chooseCulprit").fadeIn();
+            }
         }
     }
     catch(error) {
+        if (state.active.variables.player.count() > 0) {
+            $("#chooseCulprit").fadeIn();
+        }
         $("#continue").fadeIn();
     }
     });
@@ -700,6 +706,9 @@ Macro.add('dialogclose', {
         try{
             let c = document.getElementById('next0');
             if (c == null) {
+                if (state.active.variables.player.count() > 0) {
+                    $("#chooseCulprit").fadeIn();
+                }
                 $("#continue").fadeIn();
             }
             else {
@@ -707,6 +716,9 @@ Macro.add('dialogclose', {
             }
         }
         catch(error) {
+            if (state.active.variables.player.count() > 0) {
+                $("#chooseCulprit").fadeIn();
+            }
             $("#continue").fadeIn();
         }
     });
