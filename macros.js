@@ -683,6 +683,7 @@ Macro.add('dialogclose', {
         if (show.start < show.end) {
             el = '#next' + show.start;
             $(el).fadeOut();
+            $(el).remove();
             show.start++;
             el = '#next' + show.start;
             $(el).fadeIn();
@@ -697,12 +698,12 @@ Macro.add('dialogclose', {
     });
     $(document).on(':typingstop', function (ev) {
         try{
-            var dialogueExists = $("next0");
-            if (dialogueExists) {
-                dialogue.show();
+            let c = document.getElementById('next0');
+            if (c == null) {
+                $("#continue").fadeIn();
             }
             else {
-                $("#continue").fadeIn();
+                $("#next0").fadeIn();
             }
         }
         catch(error) {
