@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Green&#39;s Seven Guests" startnode="12" creator="Twine" creator-version="2.3.14" ifid="0CB710AC-D55A-4996-9C02-DE0CBFCF062B" zoom="1" format="SugarCube" format-version="2.34.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* SugarCube */
+	<tw-storydata name="Green&#39;s Seven Guests" startnode="30" creator="Twine" creator-version="2.3.14" ifid="0CB710AC-D55A-4996-9C02-DE0CBFCF062B" zoom="1" format="SugarCube" format-version="2.34.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* SugarCube */
 
 /* Fonts - Start */
 @import url("https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise:30");
@@ -214,8 +214,8 @@ introduction {
   font-family: Glass, VT323, monospace;
   position: absolute;
   bottom: 2%;
-  text-shadow: 0px 0px 20px #48dbfb;
-  color: #0abde3;
+  color: #a3ff99;
+  text-shadow: 0px 0px 20px #5dff4b;
   text-decoration: underline;
 }
 
@@ -224,8 +224,8 @@ introduction {
   position: absolute;
   right: 13%;
   bottom: 2%;
-  text-shadow: 0px 0px 20px #48dbfb;
-  color: #0abde3;
+  color: #a3ff99;
+  text-shadow: 0px 0px 20px #5dff4b;
   text-decoration: underline;
 }
 
@@ -276,15 +276,14 @@ introduction {
 .storyDialog {
 	font-family: Glass, VT323, monospace;
 	line-height: 25px;
-    text-shadow: 0px 0px 20px #48dbfb;
-  	color: #0abde3;
+    color: #a3ff99;
+  	text-shadow: 0px 0px 20px #5dff4b;
   	font-size: 28px;
   	height: 420px;
     border: 4px double white;
 	position: relative;
 	margin: 0 auto;
 	padding: 8px 5px 4px 8px;
-  	background: #000;
 	-webkit-background-size: 100% 20px;
 	   -moz-background-size: 100% 20px;
 		-ms-background-size: 100% 20px;
@@ -342,7 +341,7 @@ introduction {
 	width: 120px;
 	float: left;
 	margin: 8px 15px 0px 0px;
-	border: 2px solid white;
+	border: 2px outset white;
 	border-radius: 5px;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -359,23 +358,58 @@ introduction {
 }
 .Green .avatar {
 	background-image: URL("images/mrGreenCropped.png");
+  	border-color: green;
 }
-.Lust {
+.Lucy {
   	color: #b300b3;
     border: 2px solid purple;
   	text-shadow: 0px 0px 20px  #cc00cc;
+  	filter: brightness(1.5);
 }
-.Lust .avatar {
+.Lucy .avatar {
 	background-image: URL("images/lustCropped.png");
+    border-color: purple;
 }
-.Sloth {
+.Silas {
   	color:  #e6b800;
   	text-shadow: 0px 0px 20px #76d7f2;
     border: 2px dashed gold;
 
 }
-.Sloth .avatar {
+.Silas .avatar {
 	background-image: URL("images/slothCropped.png");
+    border-color: gold;
+}
+.William {
+  	color: #f53b57;
+  	text-shadow: 0px 0px 20px #ef5777;
+    border-color: #f53b57;
+
+}
+.William .avatar {
+	background-image: URL("images/croppedWrath.png");
+    border-color: #f53b57;
+}
+.Georgia {
+  	color: #D980FA;
+  	text-shadow: 0px 0px 20px #FDA7DF;
+    border-color: #D980FA;
+
+}
+.Georgia .avatar {
+	background-image: URL("images/croppedGluttony.png");
+    border-color: #D980FA;
+}
+
+.Piper {
+  	color: #0fbcf9;
+  	text-shadow: 0px 0px 20px #4bcffa;
+    border-color: #0fbcf9;
+
+}
+.Piper .avatar {
+	background-image: URL("images/croppedPride.png");
+    border-color: #0fbcf9;
 }
 
 .hide { display: none; }
@@ -1092,16 +1126,18 @@ Macro.add('dialogclose', {
         }
     });
 }());
-</script><tw-passagedata pid="1" name="Start Game" tags="" position="812,292" size="100,100">Good afternoon Mr. 
+</script><tw-passagedata pid="1" name="Start Game" tags="" position="922,284" size="100,100">Good afternoon Mr. 
 &lt;&lt;textbox &quot;$name&quot; &quot; &quot;&gt;&gt;
-&lt;&lt;button [[&quot;Continue&quot;|Notify Letter]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="open letter" tags="" position="724,624" size="100,100">&lt;&lt;timed 2.4s&gt;&gt;
+&lt;&lt;button [[&quot;Continue&quot;|Notify Letter]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="open letter" tags="" position="728,376" size="100,100">&lt;&lt;timed 2.4s&gt;&gt;
 	&lt;&lt;goto &quot;letter&quot;&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;img class=&quot;center-img&quot; src = &quot;images/textletter.gif&quot; width=&quot;500&quot; height=&quot;700&quot;&gt;
-&#39;&#39;</tw-passagedata><tw-passagedata pid="3" name="Title Screen" tags="" position="623,174" size="100,100">&lt;body&gt;
-	&lt;img class=&quot;game-logo&quot; src=&quot;images/gameTitle.png&quot;&gt;
+&#39;&#39;
+&lt;&lt;audio start_music stop&gt;&gt;&lt;&lt;audio letter_music play&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Title Screen" tags="" position="622,173" size="100,100">&lt;&lt;audio start_music loop play&gt;&gt;
+&lt;body&gt;
+	&lt;img class=&quot;game-logo&quot; src=&quot;images/gameTitle2.png&quot;&gt;
 	&lt;div align=&quot;center&quot; style=&quot;margin-top:40%&quot;&gt; 
-	&lt;span class=&quot;title-button&quot;&gt;&lt;&lt;button [[&quot;Start Game&quot;|Start Game]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
+	&lt;span class=&quot;title-button&quot;&gt;&lt;&lt;button [[&quot;Start Game&quot;|open letter]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 	&lt;span class=&quot;title-button&quot;&gt;&lt;&lt;button [[&quot;Inventory Demo&quot;|InventoryDemo]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/span&gt;
 	&lt;/div&gt;
 &lt;/body&gt;
@@ -1139,10 +1175,12 @@ There&#39;s a treasure chest in this room!
     &lt;&lt;/dialog&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 
-[[Continue|Settings2]]</tw-passagedata><tw-passagedata pid="5" name="Notify Letter" tags="" position="750,475" size="100,100">Good afternoon &lt;&lt;print $name&gt;&gt;, we have a letter for you.
-[[open letter]]</tw-passagedata><tw-passagedata pid="6" name="StoryInit" tags="" position="427,71" size="100,100">&lt;&lt;newinventory &#39;$player&#39;&gt;&gt;
+[[Continue|Settings2]]</tw-passagedata><tw-passagedata pid="5" name="Notify Letter" tags="" position="950,433" size="100,100">Good afternoon &lt;&lt;print $name&gt;&gt;, we have a letter for you.
+</tw-passagedata><tw-passagedata pid="6" name="StoryInit" tags="" position="427,71" size="100,100">&lt;&lt;newinventory &#39;$player&#39;&gt;&gt;
 &lt;&lt;newinventory &#39;$container&#39; &#39;hammer&#39; &#39;knife&#39;&gt;&gt;
-&lt;&lt;cacheaudio &quot;start_song&quot; &quot;music/I-Knew-a-Guy.mp3&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Settings2" tags="" position="227,437" size="100,100">In this passage, we&#39;ll give the user the opportunity to pick up or drop some items into a chest.
+&lt;&lt;cacheaudio &quot;start_music&quot; &quot;music/I-Knew-a-Guy.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;death_music&quot; &quot;music/GreenDeath.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;letter_music&quot; &quot;music/LetterOpen.wav&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Settings2" tags="" position="227,437" size="100,100">In this passage, we&#39;ll give the user the opportunity to pick up or drop some items into a chest.
 
 There&#39;s a treasure chest in this room!
 
@@ -1163,7 +1201,7 @@ There&#39;s a treasure chest in this room!
 [[Continue|inventory4]]</tw-passagedata><tw-passagedata pid="8" name="inventory2" tags="" position="160,597" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="9" name="inventory4" tags="" position="329,608" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="10" name="Green Dialogue" tags="" position="488,724" size="100,100">&lt;div&gt;
 &lt;&lt;speech &quot;Green&quot;&gt;&gt;I&#39;m Green...&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
-&lt;&lt;button [[&quot;Lust&quot;|Lust Dialogue]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="letter" tags="" position="838,621" size="100,100">&lt;section class=&quot;paper&quot;&gt;\
+&lt;&lt;button [[&quot;Lucy&quot;|Lucy Dialogue]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="letter" tags="" position="782,537" size="100,100">&lt;section class=&quot;paper&quot;&gt;\
 	&lt;article class=&quot;paperheader&quot;&gt;
 														13 Eldersgrove Avenue
 															 Oxyn, Canada
@@ -1189,14 +1227,14 @@ Dear &lt;&lt;print $name&gt;&gt;,
 &lt;&lt;set _show to { start: 0, end: 2 }&gt;&gt;
 
 &lt;div id=&#39;next0&#39;&gt;
-&lt;&lt;speech &quot;Sloth&quot;&gt;&gt;Thank you for the steady ride,” I say as the carriage driver leaves me at the base of the mansion.
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;Thank you for the steady ride,” I say as the carriage driver leaves me at the base of the mansion.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class=&#39;hide&#39; id=&#39;next1&#39;&gt;
 &lt;&lt;speech &quot;Driver&quot;&gt;&gt;Of course Sir. Is there anything else you desire?&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class=&#39;hide&#39; id=&#39;next2&#39;&gt;
-&lt;&lt;speech &quot;Sloth&quot;&gt;&gt;No, I should be good, thanks. Have a safe return.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;No, I should be good, thanks. Have a safe return.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 
 &lt;div class=&quot;inventory&quot;&gt;
@@ -1207,7 +1245,8 @@ Dear &lt;&lt;print $name&gt;&gt;,
     &lt;&lt;/dialog&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Turning towards the mansion&#39;|Mansion1]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="Introduction" tags="" position="624,47" size="100,100">&lt;&lt;timed 3.2s&gt;&gt;
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Turning towards the mansion&#39;|Mansion1]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;&lt;audio letter_music stop&gt;&gt;&lt;&lt;audio start_music play&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Introduction" tags="" position="624,47" size="100,100">&lt;&lt;timed 3.2s&gt;&gt;
 	&lt;&lt;goto &quot;Title Screen&quot;&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;introduction&gt;
@@ -1215,12 +1254,12 @@ Dear &lt;&lt;print $name&gt;&gt;,
 &lt;img src=&quot;images/logoCropped.gif&quot;&gt;
 &lt;span class=&quot;intro-text&quot; style=&quot;position:relative; bottom:60px&quot;&gt;Presents&lt;/span&gt;
 &lt;/introduction&gt; 
-&lt;&lt;audio start_song play&gt;&gt;
-</tw-passagedata><tw-passagedata pid="13" name="Lust Dialogue" tags="" position="482,880" size="100,100">&lt;div&gt;
-&lt;&lt;speech &quot;Lust&quot;&gt;&gt;I&#39;m Lust...&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
-&lt;&lt;button [[&quot;Sloth&quot;|Sloth Dialogue]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Sloth Dialogue" tags="" position="481,1035" size="100,100">&lt;div&gt;
-&lt;&lt;speech &quot;Sloth&quot;&gt;&gt;I&#39;m Sloth...&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="13" name="Lucy Dialogue" tags="" position="482,880" size="100,100">&lt;div&gt;
+&lt;&lt;speech &quot;Lucy&quot;&gt;&gt;I&#39;m Lucy...&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;&lt;button [[&quot;Silas&quot;|Silas Dialogue]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Silas Dialogue" tags="" position="481,1035" size="100,100">&lt;div&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;I&#39;m Silas...&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;&lt;button [[&quot;Show letter&quot;|letter]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="Template" tags="" position="888,1839" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;&lt;/type&gt;&gt;
@@ -1247,7 +1286,7 @@ Dear &lt;&lt;print $name&gt;&gt;,
 &lt;&lt;set _show to { start: 0, end: 2 }&gt;&gt;
 
 &lt;div id=&#39;next0&#39;&gt;
-&lt;&lt;speech &quot;Sloth&quot;&gt;&gt;Thank you for the steady ride,” I say as the carriage driver leaves me at the base of the mansion.
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;Thank you for the steady ride,” I say as the carriage driver leaves me at the base of the mansion.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="Mansion1" tags="" position="1020,746" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\I gaze up at the home of Mr. Green against the red evening sky, mustering the energy to step towards the imposing estate. It is bigger than any house I’ve ever seen, although I guess that’s to be expected when you’re a multi-millionaire like Mr. Green.
 &lt;&lt;/type&gt;&gt;
@@ -1335,7 +1374,7 @@ until I hear the scream, the quaking scream of a man in terror.
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion7]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="Mansion7" tags="" position="1140,1646" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
-&lt;&lt;type 20ms&gt;&gt;\All at once, everyone has rushed back into the hall just before the dining room from which the shout so clearly rang, but the door is closed and the handle unyielding. Gluttony tells the rest of the guests to stand back as she aligns her shoulder to the door.
+&lt;&lt;type 20ms&gt;&gt;\All at once, everyone has rushed back into the hall just before the dining room from which the shout so clearly rang, but the door is closed and the handle unyielding. Georgia tells the rest of the guests to stand back as she aligns her shoulder to the door.
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
 ​
@@ -1348,13 +1387,14 @@ until I hear the scream, the quaking scream of a man in terror.
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion8]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="Mansion8" tags="" position="1140,1796" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
-&lt;&lt;type 20ms&gt;&gt;\Upon breaking down the door, everyone stumbles into the room, all except Wrath who stays back in mild amusement as everyone topples over each other.
+&lt;&lt;type 20ms&gt;&gt;\Upon breaking down the door, everyone stumbles into the room, all except William who stays back in mild amusement as everyone topples over each other.
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
 
 &lt;div class=&quot;hide&quot; id=&#39;next0&#39;&gt;
-&lt;&lt;speech &quot;Wrath&quot;&gt;&gt;Bumbling fools...
+&lt;&lt;speech &quot;William&quot;&gt;&gt;Bumbling fools...
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
 &lt;div class=&quot;inventory&quot;&gt;
 &lt;&lt;link &#39;Check Inventory&#39;&gt;&gt;
     &lt;&lt;dialog&#39;Inventory&#39;&gt;&gt;
@@ -1363,8 +1403,9 @@ until I hear the scream, the quaking scream of a man in terror.
     &lt;&lt;/dialog&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Wrath smirks.&#39;|Mansion9]]&gt;&gt;
-&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="Mansion9" tags="" position="1140,1946" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;William smirks&#39;|Mansion9]]&gt;&gt;
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="25" name="Mansion9" tags="" position="1140,1945" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\It appears there was a rope wrapped around the two handles of the door, but it was sloppily done, like the person who tied it was in a hurry.
 
 Most of the room’s candles are extinguished, with just enough lighting to see the table.
@@ -1373,7 +1414,6 @@ Anything but, however, is shrouded in darkness.
 
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
-​
 &lt;div class=&quot;inventory&quot;&gt;
 &lt;&lt;link &#39;Check Inventory&#39;&gt;&gt;
     &lt;&lt;dialog&#39;Inventory&#39;&gt;&gt;
@@ -1383,15 +1423,21 @@ Anything but, however, is shrouded in darkness.
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion10]]&gt;&gt;
-&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="Mansion10" tags="" position="1140,2096" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;&lt;cacheaudio &quot;start_music&quot; &quot;music/I-Knew-a-Guy.mp3&quot;&gt;&gt;
+&lt;&lt;audio &quot;start_music&quot; volume 100% play&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="Mansion10" tags="" position="1140,2096" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Upon further investigation of the room, the group finds Mr. Green in his chair slumped over, his head on the table. There is no sign of any commotion or distress. It appears as if Mr. Green has simply fallen asleep at the table.
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
 
 
-&lt;&lt;set _show to { start: 0, end: 0 }&gt;&gt;
+&lt;&lt;set _show to { start: 0, end: 1 }&gt;&gt;
 &lt;div class=&quot;hide&quot; id=&#39;next0&#39;&gt;
-&lt;&lt;speech &quot;Gluttony&quot;&gt;&gt;Mr. Green, Mr. Green!” Gluttony runs toward him, only to let out a scream.
+&lt;&lt;speech &quot;Georgia&quot;&gt;&gt;Mr. Green, Mr. Green!
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;hide&quot; id=&#39;next1&#39;&gt;
+&lt;&lt;speech&gt;&gt;Georgia runs toward him, only to let out a scream.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;inventory&quot;&gt;
@@ -1403,7 +1449,9 @@ Anything but, however, is shrouded in darkness.
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;What happend?&#39;|Mansion11]]&gt;&gt;
-&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="27" name="Mansion11" tags="" position="1140,2246" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;&lt;audio &quot;start_music&quot; stop&gt;&gt;
+&lt;&lt;audio &quot;death_music&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Mansion11" tags="" position="1139,2246" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;Mr. Green’s throat had been slit, his blood pooling onto the floor.
 
 Immediately, many run toward the exit, only to find that the door won’t budge.
@@ -1411,7 +1459,7 @@ Immediately, many run toward the exit, only to find that the door won’t budge.
 They were locked in from the outside.
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
-​
+
 &lt;div class=&quot;inventory&quot;&gt;
 &lt;&lt;link &#39;Check Inventory&#39;&gt;&gt;
     &lt;&lt;dialog&#39;Inventory&#39;&gt;&gt;
@@ -1421,168 +1469,169 @@ They were locked in from the outside.
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion12]]&gt;&gt;
-&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="28" name="Mansion12" tags="" position="1140,2396" size="100,100">
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;&lt;audio &quot;start_music&quot; loop play&gt;&gt;
+</tw-passagedata><tw-passagedata pid="28" name="Mansion12" tags="" position="1140,2396" size="100,100">
 &lt;div class = &#39;absolute-center&#39;&gt;
 --- Five Minutes Later ---
 &lt;/div&gt;
 
-&lt;&lt;timed 3.5s&gt;&gt;
+&lt;&lt;timed 2.5s&gt;&gt;
 	&lt;&lt;goto &quot;Mansion13&quot;&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
-</tw-passagedata><tw-passagedata pid="29" name="Mansion13" tags="" position="1143,2543" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="29" name="Mansion13" tags="" position="1141,2543" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\All the guests have gathered in the dining room, each taking a seat around the very large table.
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
 
 &lt;&lt;set _show to { start: 0, end: 34}&gt;&gt;
 &lt;div class=&quot;hide&quot; id=&#39;next0&#39;&gt;
-&lt;&lt;speech &quot;Wrath&quot;&gt;&gt;
+&lt;&lt;speech &quot;William&quot;&gt;&gt;
 The murderer is one of us, I would think that much obvious.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next1&#39;&gt;
-&lt;&lt;speech&gt;&gt;
-Wrath sneers, eyes darting around the room.
+&lt;&lt;speech&gt;&gt;William sneers, eyes darting around the room.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next2&#39;&gt;
-&lt;&lt;speech &quot;Sloth&quot;&gt;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
 No one is doubting that, you oaf.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next3&#39;&gt;
-&lt;&lt;speech&gt;&gt;
-I signed.
+&lt;&lt;speech&gt;&gt;I signed.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next4&#39;&gt;
-&lt;&lt;speech &quot;Sloth&quot;&gt;&gt;
-but pointing fingers just to point won’t get us anywhere.
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+But pointing fingers just to point won’t get us anywhere.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next5&#39;&gt;
-&lt;&lt;speech &quot;Wrath&quot;&gt;&gt;
+&lt;&lt;speech &quot;William&quot;&gt;&gt;
 Well aren’t you a detective? Why haven’t you done anything? A detective would be used to situations like these, he would know what to look for… or what people wouldn’t want to be found.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next6&#39;&gt;
-&lt;&lt;speech &quot;Sloth&quot;&gt;&gt;What are you insinuating?” 
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;What are you insinuating?
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next7&#39;&gt;
-&lt;&lt;speech&gt;&gt;I give Wrath a warning look..
+&lt;&lt;speech&gt;&gt;I give William a warning look.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next8&#39;&gt;
-&lt;&lt;speech &quot;Wrath&quot;&gt;&gt;Or perhaps the Chef… you would be all too convenient a suspect...
+&lt;&lt;speech &quot;William&quot;&gt;&gt;Or perhaps the Chef… you would be all too convenient a suspect...
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next9&#39;&gt;
-&lt;&lt;speech&gt;&gt;Wrath slowly shakes his head, head down.
+&lt;&lt;speech&gt;&gt;William slowly shakes his head, head down.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next10&#39;&gt;
-&lt;&lt;speech &quot;Gluttony&quot;&gt;&gt;How does that make any sense?
+&lt;&lt;speech &quot;Georgia&quot;&gt;&gt;How does that make any sense?
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next11&#39;&gt;
-&lt;&lt;speech &quot;Pride&quot;&gt;&gt;Stop, all of you!” yells Pride. Everyone turns to her.
+&lt;&lt;speech &quot;Piper&quot;&gt;&gt;Stop, all of you!
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next12&#39;&gt;
-&lt;&lt;speech&gt;&gt;Everyone turns to her.
+&lt;&lt;speech&gt;&gt;Piper yells. Everyone turns to her.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next13&#39;&gt;
-&lt;&lt;speech &quot;Pride&quot;&gt;&gt;It’s quite clear nothing will get done by sitting here and pointing fingers. I think it’s also clear that some people,
+&lt;&lt;speech &quot;Piper&quot;&gt;&gt;It’s quite clear nothing will get done by sitting here and pointing fingers. I think it’s also clear that some people,
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next14&#39;&gt;
-&lt;&lt;speech&gt;&gt;Pride scowls at Wrath
+&lt;&lt;speech&gt;&gt;Piper scowls at William
+
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next15&#39;&gt;
-&lt;&lt;speech &quot;Pride&quot;&gt;&gt;might be better off staying here until it’s all sorted out.
+&lt;&lt;speech &quot;Piper&quot;&gt;&gt;might be better off staying here until it’s all sorted out.
 As such, take ease in knowing that I will find the murderer, and you all can stay put!
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next16&#39;&gt;
-&lt;&lt;speech &quot;Pride&quot;&gt;&gt;You’d probably get in the way anyway...”
+&lt;&lt;speech &quot;Piper&quot;&gt;&gt;You’d probably get in the way anyway...
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next17&#39;&gt;
-&lt;&lt;speech&gt;&gt;Pride mumbles, more to herself, and starts toward the door to the entrance hall.
+&lt;&lt;speech&gt;&gt;Piper mumbles, more to herself, and starts toward the door to the entrance hall.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next18&#39;&gt;
-&lt;&lt;speech&gt;&gt;Wrath stands up and points at Pride, exclaiming:
+&lt;&lt;speech&gt;&gt;William stands up and points at Piper, exclaiming
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 
 &lt;div class = &quot;hide&quot; id=&#39;next19&#39;&gt;
-&lt;&lt;speech &quot;Wrath&quot;&gt;&gt;Wait a second! This seems like a ploy to get away and do off with the rest of us! How do we know you’re not trying to get the drop on us?
+&lt;&lt;speech &quot;William&quot;&gt;&gt;Wait a second! This seems like a ploy to get away and do off with the rest of us! How do we know you’re not trying to get the drop on us?
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next20&#39;&gt;
-&lt;&lt;speech &quot;Pride&quot;&gt;&gt;Oh please
+&lt;&lt;speech &quot;Piper&quot;&gt;&gt;Oh please
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next21&#39;&gt;
-&lt;&lt;speech&gt;&gt;Chuckles Pride at the doorway
+&lt;&lt;speech&gt;&gt;Piper chuckles at the doorway
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next22&#39;&gt;
-&lt;&lt;speech &quot;Pride&quot;&gt;&gt;Do you really think any of you would pose a challenge in the first place?
+&lt;&lt;speech &quot;Piper&quot;&gt;&gt;Do you really think any of you would pose a challenge in the first place?
 Don’t leave until I get back!
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 
 &lt;div class = &quot;hide&quot; id=&#39;next23&#39;&gt;
-&lt;&lt;speech&gt;&gt;Pride yells as her footsteps fade away.
+&lt;&lt;speech&gt;&gt;Piper yells as her footsteps fade away.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 
 &lt;div class = &quot;hide&quot; id=&#39;next24&#39;&gt;
-&lt;&lt;speech&gt;&gt; Wrath sighs heavily, and looks at Sloth.
+&lt;&lt;speech&gt;&gt; William sighs heavily, and looks at Silas.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next25&#39;&gt;
-&lt;&lt;speech &quot;Wrath&quot;&gt;&gt; Well? Aren’t you going to do anything? Some detective...
+&lt;&lt;speech &quot;William&quot;&gt;&gt; Well? Aren’t you going to do anything? Some detective...
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next26&#39;&gt;
-&lt;&lt;speech &quot;Sloth&quot;&gt;&gt;What do you want from me? The last thing we should do is split up. We’d just be making it easier.
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;What do you want from me? The last thing we should do is split up. We’d just be making it easier.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next27&#39;&gt;
-&lt;&lt;speech &quot;Wrath&quot;&gt;&gt;Good lord… I’m surrounded by idiots.
+&lt;&lt;speech &quot;William&quot;&gt;&gt;Good lord… I’m surrounded by idiots.
 Fine then.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 
 &lt;div class = &quot;hide&quot; id=&#39;next28&#39;&gt;
-&lt;&lt;speech&gt;&gt;Wrath steps towards the entrance hall.
+&lt;&lt;speech&gt;&gt;William steps towards the entrance hall.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next29&#39;&gt;
-&lt;&lt;speech &quot;Wrath&quot;&gt;&gt;I guess I’ll have to take matters into my own hands.
+&lt;&lt;speech &quot;William&quot;&gt;&gt;I guess I’ll have to take matters into my own hands.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next30&#39;&gt;
-&lt;&lt;speech &quot;Lust&quot;&gt;&gt;So you’re leaving too?
+&lt;&lt;speech &quot;Lucy&quot;&gt;&gt;So you’re leaving too?
 Why would you be any less of a suspect than her?
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next31&#39;&gt;
-&lt;&lt;speech &quot;Wrath&quot;&gt;&gt;I don’t have time to talk to you animals.
+&lt;&lt;speech &quot;William&quot;&gt;&gt; I don’t have time to talk to you animals.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next32&#39;&gt;
-&lt;&lt;speech&gt;&gt;Wrath growls. He is seen leaving the room, walking up the central staircase, and down a hall.
+&lt;&lt;speech&gt;&gt;William growls. He is seen leaving the room, walking up the central staircase, and down a hall.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next33&#39;&gt;
-&lt;&lt;speech &quot;Sloth&quot;&gt;&gt;Well I guess that just leaves us.
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;Well I guess that just leaves us.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next34&#39;&gt;
@@ -1597,18 +1646,18 @@ Why would you be any less of a suspect than her?
     &lt;&lt;/dialog&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion14]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="Mansion14" tags="" position="1140,2696" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
-&lt;&lt;type 20ms&gt;&gt;\Lust meets my eyes for a split second, almost with a hint of worry, but I must’ve imagined it because she says that she’s going to look for a way out, and heads off as well.
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion14]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="Mansion14" tags="" position="1139,2695" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;type 20ms&gt;&gt;\Lucy meets my eyes for a split second, almost with a hint of worry, but I must’ve imagined it because she says that she’s going to look for a way out, and heads off as well.
 
 No one says anything to stop her.
 
 At this point, it’s just
-Envy, Gluttony, and I in the room.
+V, Georgia, and I in the room.
 
 &lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
-    &lt;img src=&quot;images/Envy.png&quot; alt=&quot;Envy&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
-    &lt;img src=&quot;images/Gluttony.png&quot; alt=&quot;Gluttony&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
-	&lt;img src=&quot;images/Sloth.png&quot; alt=&quot;Sloth&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+    &lt;img src=&quot;images/Unknown_Character.png&quot; alt=&quot;V&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+    &lt;img src=&quot;images/Gluttony.png&quot; alt=&quot;Georgia&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+	&lt;img src=&quot;images/Sloth.png&quot; alt=&quot;Silas&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
 &lt;/figure&gt;
 
 
@@ -1636,38 +1685,38 @@ Envy, Gluttony, and I in the room.
 &lt;&lt;set _show to { start: 0, end: 6}&gt;&gt;
 &lt;div class= &quot;hide&quot; id=&#39;next0&#39;&gt;
 &lt;&lt;speech&gt;&gt;
-After a little while, Gluttony stands up and groans
+After a little while, Georgia stands up and groans
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next1&#39;&gt;
-&lt;&lt;speech &quot;Gluttony&quot;&gt;&gt;
+&lt;&lt;speech &quot;Georgia&quot;&gt;&gt;
 Well I guess they’re not coming back for a bit. I’m going to head to the kitchen to check up on all the staff. I bet they’ve been getting dessert ready this whole time.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next2&#39;&gt;
 &lt;&lt;speech&gt;&gt;
-She walks off, leaving myself and Envy.
-The two of us stay there for about ten more minutes, until I eventually murmur to Envy:
+She walks off, leaving myself and V.
+The two of us stay there for about ten more minutes, until I eventually murmur to V
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next3&#39;&gt;
-&lt;&lt;speech &quot;Sloth&quot;&gt;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
 Well do you have any miraculous reason you need to head off?
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next4&#39;&gt;
 &lt;&lt;speech&gt;&gt;
-Envy gives no indication that they heard me aside from a slight glance in my direction.
+V gives no indication that they heard me aside from a slight glance in my direction.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next5&#39;&gt;
-&lt;&lt;speech &quot;Sloth&quot;&gt;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
 Well, I guess it’s my turn.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next6&#39;&gt;
 &lt;&lt;speech&gt;&gt;
- I say as you stand up, hands in my pockets, and think about my next move.
+ I say as I stand up, hands in my pockets, and think about my next move.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 ​
