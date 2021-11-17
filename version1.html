@@ -1215,16 +1215,14 @@ Macro.add('dialogclose', {
             $("#continue").fadeIn();
         }
     });
-    $(document).ready(function(){
         var name;
-        $(".link-selector").mouseover(function(){
+        $(document).on('mouseover', ".link-selector", function(){
             name = $(this).attr('name');
           $(`img[alt="${name}"]`).addClass('bright');
         });
-        $(".link-selector").mouseout(function(){
+        $(document).on('mouseout', ".link-selector", function(){
             $(`img[alt="${name}"]`).removeClass('bright');
         });
-      });
 }());
 </script><tw-passagedata pid="1" name="Start Game" tags="" position="922,284" size="100,100">Good afternoon Mr. 
 &lt;&lt;textbox &quot;$name&quot; &quot; &quot;&gt;&gt;
@@ -1868,7 +1866,7 @@ Well, I guess it’s my turn.
 &lt;&lt;if $player.count() &gt; 0 &gt;&gt;
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="Green1" tags="" position="1251,3092" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="Green1" tags="" position="1251,3093" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Upon inspection of Mr. Green’s corpse, I noticed a torn piece of fine red cloth under one of the legs of the chair. It seems as though something was stuck under it, and ripped off once it was moved.
 While it doesn’t immediately ring any bells, I can’t help but have a sneaking suspicion that I’ve seen this before.
 &lt;&lt;/type&gt;&gt;

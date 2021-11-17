@@ -725,14 +725,12 @@ Macro.add('dialogclose', {
             $("#continue").fadeIn();
         }
     });
-    $(document).ready(function(){
         var name;
-        $(".link-selector").mouseover(function(){
+        $(document).on('mouseover', ".link-selector", function(){
             name = $(this).attr('name');
           $(`img[alt="${name}"]`).addClass('bright');
         });
-        $(".link-selector").mouseout(function(){
+        $(document).on('mouseout', ".link-selector", function(){
             $(`img[alt="${name}"]`).removeClass('bright');
         });
-      });
 }());
