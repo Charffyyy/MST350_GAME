@@ -679,6 +679,9 @@ Macro.add('dialogclose', {
     $(document).on('click', ".speech", function () {
         var show = State.temporary.show;
         var el;
+        if ($(this).parent().hasClass("prevent-continue")) {
+            return;
+        }
         try {
         if (show.start < show.end) {
             el = '#next' + show.start;
@@ -722,4 +725,14 @@ Macro.add('dialogclose', {
             $("#continue").fadeIn();
         }
     });
+    $(document).ready(function(){
+        var name;
+        $(".link-selector").mouseover(function(){
+            name = $(this).attr('name');
+          $(`img[alt="${name}"]`).addClass('bright');
+        });
+        $(".link-selector").mouseout(function(){
+            $(`img[alt="${name}"]`).removeClass('bright');
+        });
+      });
 }());
