@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Green&#39;s Seven Guests" startnode="32" creator="Twine" creator-version="2.3.14" ifid="0CB710AC-D55A-4996-9C02-DE0CBFCF062B" zoom="1" format="SugarCube" format-version="2.34.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* SugarCube */
+	<tw-storydata name="Green&#39;s Seven Guests" startnode="2" creator="Twine" creator-version="2.3.14" ifid="0CB710AC-D55A-4996-9C02-DE0CBFCF062B" zoom="1" format="SugarCube" format-version="2.34.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* SugarCube */
 
 /* Fonts - Start */
 @import url("https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise:30");
@@ -1235,14 +1235,12 @@ Macro.add('dialogclose', {
             $(`img[alt="${name}"]`).removeClass('bright');
         });
 }());
-</script><tw-passagedata pid="1" name="Start Game" tags="" position="922,284" size="100,100">Good afternoon Mr. 
-&lt;&lt;textbox &quot;$name&quot; &quot; &quot;&gt;&gt;
-&lt;&lt;button [[&quot;Continue&quot;|Notify Letter]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="open letter" tags="" position="728,376" size="100,100">&lt;&lt;timed 2.4s&gt;&gt;
+</script><tw-passagedata pid="1" name="open letter" tags="" position="727,375" size="100,100">&lt;&lt;timed 2.4s&gt;&gt;
 	&lt;&lt;goto &quot;letter&quot;&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;img class=&quot;center-img&quot; src = &quot;images/textletter.gif&quot; width=&quot;500&quot; height=&quot;700&quot;&gt;
 &#39;&#39;
-&lt;&lt;audio start_music stop&gt;&gt;&lt;&lt;audio letter_music play&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Title Screen" tags="" position="622,172" size="100,100">&lt;&lt;audio start_music loop play&gt;&gt;
+&lt;&lt;audio start_music stop&gt;&gt;&lt;&lt;audio letter_music play&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Title Screen" tags="" position="622,172" size="100,100">&lt;&lt;audio start_music loop play&gt;&gt;
 &lt;body&gt;
 	&lt;img class=&quot;game-logo&quot; src=&quot;images/gameTitle2.png&quot;&gt;
 	&lt;div align=&quot;center&quot; style=&quot;margin-top:40%&quot;&gt; 
@@ -1252,67 +1250,15 @@ Macro.add('dialogclose', {
 &lt;/div&gt;
 &lt;/body&gt;
 
-</tw-passagedata><tw-passagedata pid="4" name="InventoryDemo" tags="" position="368,290" size="100,100">&lt;&lt;nobr&gt;&gt;
-    &lt;&lt;if not $player.has(&#39;chisel&#39;)&gt;&gt;    
-        &lt;&lt;linkreplace &#39;Pick up the chisel.&#39;&gt;&gt;
-            You got the chisel.
-            &lt;&lt;pickup &#39;$player&#39; &#39;chisel&#39;&gt;&gt;
-			&lt;&lt;script&gt;&gt;console.log(&quot;got here 1&quot;)&lt;&lt;/script&gt;&gt;
-        &lt;&lt;/linkreplace&gt;&gt;
-    &lt;&lt;else&gt;&gt;
-        You got the chisel.
-    &lt;&lt;/if&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;
-
-There&#39;s a treasure chest in this room!
-
-&lt;&lt;link &#39;Put some items in the chest.&#39;&gt;&gt;
-    &lt;&lt;dialog &#39;Place items.&#39;&gt;&gt;
-        &lt;&lt;linkedinventory &#39;leave&#39; &#39;$player&#39; &#39;$container&#39;&gt;&gt;
-    &lt;&lt;/dialog&gt;&gt;
-&lt;&lt;/link&gt;&gt;
-
-&lt;&lt;link &#39;Take some items from the chest.&#39;&gt;&gt;
-    &lt;&lt;dialog &#39;Take items.&#39;&gt;&gt;
-        &lt;&lt;linkedinventory &#39;take&#39; &#39;$container&#39; &#39;$player&#39;&gt;&gt;
-    &lt;&lt;/dialog&gt;&gt;
-&lt;&lt;/link&gt;&gt;
-
-&lt;&lt;link &#39;Check Inventory&#39;&gt;&gt;
-    &lt;&lt;dialog &#39;Inventory&#39;&gt;&gt;
-		&lt;&lt;dialog&gt;&gt;You are carrying &lt;&lt;= $player.count()&gt;&gt; items in your inventory.&lt;&lt;/dialog&gt;&gt;
-        &lt;&lt;linkedinventory &#39;leave&#39; &#39;$player&#39;&gt;&gt;
-    &lt;&lt;/dialog&gt;&gt;
-&lt;&lt;/link&gt;&gt;
-
-[[Continue|Settings2]]</tw-passagedata><tw-passagedata pid="5" name="Notify Letter" tags="" position="950,433" size="100,100">Good afternoon &lt;&lt;print $name&gt;&gt;, we have a letter for you.
-</tw-passagedata><tw-passagedata pid="6" name="StoryInit" tags="" position="427,71" size="100,100">&lt;&lt;newinventory &#39;$player&#39;&gt;&gt;
+</tw-passagedata><tw-passagedata pid="3" name="StoryInit" tags="" position="427,71" size="100,100">&lt;&lt;newinventory &#39;$player&#39;&gt;&gt;
 &lt;&lt;newinventory &#39;$container&#39; &#39;hammer&#39; &#39;knife&#39;&gt;&gt;
 &lt;&lt;set $accomplished_mission = new Set()&gt;&gt;
 &lt;&lt;cacheaudio &quot;start_music&quot; &quot;music/I-Knew-a-Guy.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;death_music&quot; &quot;music/GreenDeath.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;letter_music&quot; &quot;music/LetterOpen.wav&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Settings2" tags="" position="227,437" size="100,100">In this passage, we&#39;ll give the user the opportunity to pick up or drop some items into a chest.
-
-There&#39;s a treasure chest in this room!
-
-&lt;&lt;link &#39;Put some items in the chest.&#39;&gt;&gt;
-    &lt;&lt;dialog &#39;Place items.&#39;&gt;&gt;
-        &lt;&lt;linkedinventory &#39;leave&#39; &#39;$player&#39; &#39;$container&#39;&gt;&gt;
-    &lt;&lt;/dialog&gt;&gt;
-&lt;&lt;/link&gt;&gt;
-
-&lt;&lt;link &#39;Take some items from the chest.&#39;&gt;&gt;
-    &lt;&lt;dialog &#39;Take items.&#39;&gt;&gt;
-        &lt;&lt;linkedinventory &#39;take&#39; &#39;$container&#39; &#39;$player&#39;&gt;&gt;
-    &lt;&lt;/dialog&gt;&gt;
-&lt;&lt;/link&gt;&gt;
-
-[[Go back|inventory2]]
-
-[[Continue|inventory4]]</tw-passagedata><tw-passagedata pid="8" name="inventory2" tags="" position="160,597" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="9" name="inventory4" tags="" position="329,608" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="10" name="Green Dialogue" tags="" position="488,724" size="100,100">&lt;div&gt;
+&lt;&lt;cacheaudio &quot;letter_music&quot; &quot;music/LetterOpen.wav&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Green Dialogue" tags="" position="488,724" size="100,100">&lt;div&gt;
 &lt;&lt;speech &quot;Green&quot;&gt;&gt;I&#39;m Green...&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
-&lt;&lt;button [[&quot;Lucy&quot;|Lucy Dialogue]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="letter" tags="" position="782,537" size="100,100">&lt;section class=&quot;paper&quot;&gt;\
+&lt;&lt;button [[&quot;Lucy&quot;|Lucy Dialogue]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="letter" tags="" position="782,537" size="100,100">&lt;section class=&quot;paper&quot;&gt;\
 	&lt;article class=&quot;paperheader&quot;&gt;
 														13 Eldersgrove Avenue
 															 Oxyn, Canada
@@ -1357,7 +1303,7 @@ Dear &lt;&lt;print $name&gt;&gt;,
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Turning towards the mansion&#39;|Mansion1]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;
-&lt;&lt;audio letter_music stop&gt;&gt;&lt;&lt;audio start_music play&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Introduction" tags="" position="624,47" size="100,100">&lt;&lt;timed 3.2s&gt;&gt;
+&lt;&lt;audio letter_music stop&gt;&gt;&lt;&lt;audio start_music play&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Introduction" tags="" position="624,47" size="100,100">&lt;&lt;timed 3.2s&gt;&gt;
 	&lt;&lt;goto &quot;Title Screen&quot;&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;introduction&gt;
@@ -1366,39 +1312,13 @@ Dear &lt;&lt;print $name&gt;&gt;,
 &lt;span class=&quot;intro-text&quot; style=&quot;position:relative; bottom:60px&quot;&gt;Presents&lt;/span&gt;
 &lt;/introduction&gt; 
 
-</tw-passagedata><tw-passagedata pid="13" name="Lucy Dialogue" tags="" position="482,880" size="100,100">&lt;div&gt;
+</tw-passagedata><tw-passagedata pid="7" name="Lucy Dialogue" tags="" position="482,880" size="100,100">&lt;div&gt;
 &lt;&lt;speech &quot;Lucy&quot;&gt;&gt;I&#39;m Lucy...&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
-&lt;&lt;button [[&quot;Silas&quot;|Silas Dialogue]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Silas Dialogue" tags="" position="481,1035" size="100,100">&lt;div&gt;
+&lt;&lt;button [[&quot;Silas&quot;|Silas Dialogue]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Silas Dialogue" tags="" position="481,1035" size="100,100">&lt;div&gt;
 &lt;&lt;speech &quot;Silas&quot;&gt;&gt;I&#39;m Silas...&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
-&lt;&lt;button [[&quot;Show letter&quot;|letter]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="Template" tags="" position="888,1839" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
-&lt;&lt;type 20ms&gt;&gt;\Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;&lt;/type&gt;&gt;
-&lt;/section&gt;
-
-&lt;div class=&quot;inventory&quot;&gt;
-&lt;&lt;link &#39;Check Inventory&#39;&gt;&gt;
-    &lt;&lt;dialog&#39;Inventory&#39;&gt;&gt;
-		You are carrying &lt;&lt;=$player.count()&gt;&gt; items in your inventory.
-        &lt;&lt;linkedinventory &#39; &#39; &#39;$player&#39; &#39;$container&#39;&gt;&gt;
-    &lt;&lt;/dialog&gt;&gt;
-&lt;&lt;/link&gt;&gt;
-&lt;/div&gt;
-&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Template]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-
-&lt;&lt;set _show to { start: 0, end: 2 }&gt;&gt;
-
-&lt;div id=&#39;next0&#39;&gt;
-&lt;&lt;speech &quot;Silas&quot;&gt;&gt;Thank you for the steady ride,” I say as the carriage driver leaves me at the base of the mansion.
-&lt;&lt;/speech&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="Mansion1" tags="" position="1021,746" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;button [[&quot;Show letter&quot;|letter]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="Mansion1" tags="" position="1021,746" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\I gaze up at the home of Mr. Green against the red evening sky, mustering the energy to step towards the imposing estate. It is bigger than any house I’ve ever seen, although I guess that’s to be expected when you’re a multi-millionaire like Mr. Green.
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
@@ -1411,7 +1331,7 @@ Dear &lt;&lt;print $name&gt;&gt;,
     &lt;&lt;/dialog&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion2]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="Next" tags="" position="852,895" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="18" name="Mansion2" tags="" position="1140,894" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion2]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="Next" tags="" position="852,895" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="11" name="Mansion2" tags="" position="1140,894" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Once reaching the top of the stairs, I come face to face with a large, golden, orante knocker that seems to nearly rattle the doors off the hinges as I use it.
 
 “Ah, Mr. Atomic, quite nice to finally meet you!” says quite clearly a greeter, a large smile plastered across his face.
@@ -1430,7 +1350,7 @@ Dear &lt;&lt;print $name&gt;&gt;,
     &lt;&lt;/dialog&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion3]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="Mansion3" tags="" position="1140,1046" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion3]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="Mansion3" tags="" position="1140,1046" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\The halls and the servants of our host are a blur to me as I’m whisked inside. Mr. Green has invited a generous dozen or so people, but I can’t be bothered to sort out their names and faces until the crowd thins out.
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
@@ -1443,7 +1363,7 @@ Dear &lt;&lt;print $name&gt;&gt;,
     &lt;&lt;/dialog&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion4]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="20" name="Mansion4" tags="" position="1140,1196" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion4]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Mansion4" tags="" position="1140,1196" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Eventually I find myself seated at a massive table with more places than there are guests. I rebuttal attempts at conversation. A rich, if modestly portioned meal is set before all the guests. I’m sure to savour every bite.
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
@@ -1456,7 +1376,7 @@ Dear &lt;&lt;print $name&gt;&gt;,
     &lt;&lt;/dialog&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion5]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="21" name="Mansion5" tags="" position="1140,1346" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion5]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="Mansion5" tags="" position="1140,1346" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\There is much milling about following the meal. One by one, guests find their way home. I should really get back as well, but every time I think about the long carriage ride, I balk.
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
@@ -1469,7 +1389,7 @@ Dear &lt;&lt;print $name&gt;&gt;,
     &lt;&lt;/dialog&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion6]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="Mansion6" tags="" position="1140,1496" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion6]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="15" name="Mansion6" tags="" position="1140,1496" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\The kitchen is cleaning up after the preparations. They’re good company. I loiter there for some time…
 
 until I hear the scream, the quaking scream of a man in terror.
@@ -1484,7 +1404,7 @@ until I hear the scream, the quaking scream of a man in terror.
     &lt;&lt;/dialog&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion7]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="Mansion7" tags="" position="1140,1646" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion7]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="Mansion7" tags="" position="1140,1646" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\All at once, everyone has rushed back into the hall just before the dining room from which the shout so clearly rang, but the door is closed and the handle unyielding. Georgia tells the rest of the guests to stand back as she aligns her shoulder to the door.
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
@@ -1497,7 +1417,7 @@ until I hear the scream, the quaking scream of a man in terror.
     &lt;&lt;/dialog&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion8]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="Mansion8" tags="" position="1139,1796" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion8]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="Mansion8" tags="" position="1139,1796" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Upon breaking down the door, everyone stumbles into the room, all except William who stays back in mild amusement as everyone topples over each other.
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
@@ -1516,7 +1436,7 @@ until I hear the scream, the quaking scream of a man in terror.
 &lt;/div&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;William smirks&#39;|Mansion9]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="25" name="Mansion9" tags="" position="1140,1945" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="18" name="Mansion9" tags="" position="1140,1945" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\It appears there was a rope wrapped around the two handles of the door, but it was sloppily done, like the person who tied it was in a hurry.
 
 Most of the room’s candles are extinguished, with just enough lighting to see the table.
@@ -1533,10 +1453,10 @@ Anything but, however, is shrouded in darkness.
     &lt;&lt;/dialog&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion10]]&gt;&gt;
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Blood Splatter]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;cacheaudio &quot;start_music&quot; &quot;music/I-Knew-a-Guy.mp3&quot;&gt;&gt;
-&lt;&lt;audio &quot;start_music&quot; volume 100% play&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="Mansion10" tags="" position="1139,2097" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;audio &quot;start_music&quot; volume 100% play&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Mansion10" tags="" position="1138,2097" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Upon further investigation of the room, the group finds Mr. Green in his chair slumped over, his head on the table. There is no sign of any commotion or distress. It appears as if Mr. Green has simply fallen asleep at the table.
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
@@ -1562,7 +1482,7 @@ Anything but, however, is shrouded in darkness.
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;What happend?&#39;|Mansion11]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;audio &quot;start_music&quot; stop&gt;&gt;
-&lt;&lt;audio &quot;death_music&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Mansion11" tags="" position="1139,2246" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;audio &quot;death_music&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="Mansion11" tags="" position="1139,2246" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;Mr. Green’s throat had been slit, his blood pooling onto the floor.
 
 Immediately, many run toward the exit, only to find that the door won’t budge.
@@ -1582,14 +1502,14 @@ They were locked in from the outside.
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion12]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;audio &quot;start_music&quot; loop play&gt;&gt;
-</tw-passagedata><tw-passagedata pid="28" name="Mansion12" tags="" position="1140,2396" size="100,100">&lt;div class = &#39;absolute-center&#39;&gt;
+</tw-passagedata><tw-passagedata pid="21" name="Mansion12" tags="" position="1140,2396" size="100,100">&lt;div class = &#39;absolute-center&#39;&gt;
 --- Five Minutes Later ---
 &lt;/div&gt;
 
 &lt;&lt;timed 2.5s&gt;&gt;
 	&lt;&lt;goto &quot;Mansion13&quot;&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
-</tw-passagedata><tw-passagedata pid="29" name="Mansion13" tags="" position="1141,2543" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="22" name="Mansion13" tags="" position="1141,2543" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\All the guests have gathered in the dining room, each taking a seat around the very large table.
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
@@ -1756,7 +1676,7 @@ Why would you be any less of a suspect than her?
     &lt;&lt;/dialog&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion14]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="Mansion14" tags="" position="1138,2694" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion14]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="Mansion14" tags="" position="1138,2693" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Lucy meets my eyes for a split second, almost with a hint of worry, but I must’ve imagined it because she says that she’s going to look for a way out, and heads off as well.
 
 No one says anything to stop her.
@@ -1785,7 +1705,7 @@ At this point, it’s just V, Georgia, and I in the room.
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion15]]&gt;&gt;
-&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="Mansion15" tags="" position="1137,2843" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="Mansion15" tags="" position="1079,2835" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\None of us are speaking, but I guess that’s to be expected when someone was murdered not twenty minutes ago.
 
 &lt;&lt;/type&gt;&gt;
@@ -1832,19 +1752,25 @@ Well, I guess it’s my turn.
     &lt;&lt;/dialog&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|MainEntrance]]&gt;&gt;
-&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="32" name="MainEntrance" tags="" position="1078,3105" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
-&lt;&lt;type 20ms&gt;&gt;\Mr. Green’s body is slumped forward on the grand dining table, starkly lit against the dark corners of the room.
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Dining Hall]]&gt;&gt;
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="MainEntrance" tags="" position="1077,3105" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;type 20ms&gt;&gt;\ This is the main entrance for the house, it seems to connect many different areas of the house. 
+
+It&#39;s just William and I in this room.
+&lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
+    &lt;img src=&quot;images/Wrath.png&quot; alt=&quot;Wrath&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+	&lt;img src=&quot;images/Sloth.png&quot; alt=&quot;Silas&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+&lt;/figure&gt;
+
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
 
 &lt;div class=&quot;hide&quot; id =&quot;next0&quot;&gt;
-&lt;div class=&quot;gameDialog&quot;&gt;Current Location: Dining Hall
-
-&lt;&lt;link [[&#39;Go to Theatre&#39;|Theatre]]&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link [[&#39;Go to Upstairs&#39;|Upstairs]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;div class=&quot;gameDialog&quot;&gt;Current Location: Main Entrance
+&lt;&lt;link [[&#39;Go to Dining Hall&#39;|Dining Hall]]&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link [[&#39;Go to Kitchen&#39;|Kitchen]]&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link [[&#39;Investigate Mr.Green&#39;|Green1]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link [[&#39;Go to Theatre&#39;|Theatre]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link [[&#39;Go Upstairs&#39;|Upstairs]]&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;/div&gt;&lt;/div&gt;
 
 &lt;div class=&quot;inventory&quot;&gt;
@@ -1859,7 +1785,7 @@ Well, I guess it’s my turn.
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="33" name="Theatre" tags="" position="316,3320" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="26" name="Theatre" tags="" position="315,3320" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Walking into the entryway of the theatre, I am not surprised to see an expansive row of seats coupled with a lifted platform, presumably for performers. The stage is about thirty metres ahead of me.
 The area is very dimly lit by a few candles, and I cannot see what’s on the stage at all.
 As I get closer to the stage, I hear the soft sounds of sniffling and crying.
@@ -1882,7 +1808,7 @@ As they run away, I hear something metallic hit the ground. The running stops fo
 &lt;div class=&quot;hide&quot; id =&quot;next2&quot;&gt;
 &lt;div class=&quot;gameDialog&quot;&gt;Current Location: Theatre
 &lt;&lt;link [[&#39;Go to Stage&#39;|Stage]]&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link [[&#39;Go back to Dining Hall&#39;|MainEntrance]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link [[&#39;Go back to Main Entrance&#39;|MainEntrance]]&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;inventory&quot;&gt;
@@ -1897,7 +1823,7 @@ As they run away, I hear something metallic hit the ground. The running stops fo
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="34" name="Green1" tags="" position="1388,3153" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="27" name="Green1" tags="" position="1321,2986" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Upon inspection of Mr. Green’s corpse, I noticed a torn piece of fine red cloth under one of the legs of the chair. It seems as though something was stuck under it, and ripped off once it was moved.
 While it doesn’t immediately ring any bells, I can’t help but have a sneaking suspicion that I’ve seen this before.
 &lt;&lt;/type&gt;&gt;
@@ -1929,7 +1855,7 @@ While it doesn’t immediately ring any bells, I can’t help but have a sneakin
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="35" name="Choose Culprit" tags="" position="1493,2854" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="28" name="Choose Culprit" tags="" position="1493,2854" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\You have collected &lt;&lt;= $player.count()&gt;&gt; items so far and spoken with &lt;&lt;= $accomplished_mission.size &gt;&gt; people about the evidence, you feel that you are confident in deciding who the culprit is, click the one whom you feel is most likely to be the killer.
 &lt;&lt;/type&gt;&gt;&lt;div class=&quot;hide&quot; id=&quot;next0&quot;&gt;&lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
         &lt;a data-passage=&quot;Incorrect Decision&quot;&gt;&lt;img class=&quot;selectCharacter&quot; src=&quot;images/Pride_v1.png&quot; alt=&quot;Piper&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;&lt;/a&gt;
@@ -1953,11 +1879,11 @@ While it doesn’t immediately ring any bells, I can’t help but have a sneakin
     &lt;&lt;/dialog&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;continue&quot;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="36" name="Incorrect Decision" tags="" position="1515,3087" size="100,100">
+&lt;div id=&quot;continue&quot;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="Incorrect Decision" tags="" position="1515,3087" size="100,100">
 &lt;&lt;speech &quot;Silas&quot;&gt;&gt;&lt;&lt;type 20ms&gt;&gt;I was confident in my accusation previously, but now that I’ve said it out loud, I realised that it doesn’t really make sense. Because of my incorrect guess, once sunrise comes, the murderer is able to get away scott-free.&lt;&lt;/type&gt;&gt;
 &lt;&lt;/speech&gt;&gt;
 
-&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|The End]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="37" name="The End" tags="" position="1577,3242" size="100,100">&lt;div class = &#39;absolute-center&#39;&gt;
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|The End]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="The End" tags="" position="1577,3242" size="100,100">&lt;div class = &#39;absolute-center&#39;&gt;
 --- THE END ---
 &lt;/div&gt;
 
@@ -1965,11 +1891,11 @@ While it doesn’t immediately ring any bells, I can’t help but have a sneakin
 	&lt;&lt;script&gt;&gt;
 		state.restart();
 	&lt;&lt;endscript&gt;&gt;
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="Correct Decision" tags="" position="1654,3092" size="100,100">
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="Correct Decision" tags="" position="1654,3092" size="100,100">
 &lt;&lt;speech &quot;Silas&quot;&gt;&gt;&lt;&lt;type 20ms&gt;&gt;This was the correct decision&lt;&lt;/type&gt;&gt;
 &lt;&lt;/speech&gt;&gt;
 
-&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|The End]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="39" name="Demo" tags="" position="520,366" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|The End]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="32" name="Demo" tags="" position="520,366" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\At this point, it’s just V, Georgia, and I in the room.
 
 
@@ -2001,7 +1927,7 @@ While it doesn’t immediately ring any bells, I can’t help but have a sneakin
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;div id=&quot;continue&quot;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="Pickupitem" tags="" position="524,534" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;div id=&quot;continue&quot;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="33" name="Pickupitem" tags="" position="524,534" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Upon inspection of Mr. Green’s corpse, I noticed a torn piece of fine red cloth under one of the legs of the chair. It seems as though something was stuck under it, and ripped off once it was moved.
 While it doesn’t immediately ring any bells, I can’t help but have a sneaking suspicion that I’ve seen this before.
 &lt;&lt;/type&gt;&gt;
@@ -2033,7 +1959,7 @@ While it doesn’t immediately ring any bells, I can’t help but have a sneakin
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="41" name="demoConversation" tags="" position="405,488" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="34" name="demoConversation" tags="" position="311,532" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;
 &lt;&lt;type 20ms&gt;&gt;
 &lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
     &lt;img src=&quot;images/Cloth.png&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
@@ -2060,19 +1986,18 @@ SOME TEXT ABOUT THE CLOTH
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="42" name="Upstairs" tags="" position="857,3322" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="35" name="Upstairs" tags="" position="857,3322" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\There are four rooms upstairs.
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
 
 &lt;div class=&quot;hide&quot; id =&quot;next0&quot;&gt;
 &lt;div class=&quot;gameDialog&quot;&gt;Current Location: Upstairs
-
 &lt;&lt;link [[&#39;Go to Study Room&#39;|StudyRoom]]&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link [[&#39;Go to Guest Room&#39;|GuestRoom]]&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link [[&#39;Go to Master Bedroom&#39;|MasterBedroom]]&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link [[&#39;Go to Game Room&#39;|Game Room]]&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link [[&#39;Go back to Dining Hall&#39;|MainEntrance]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link [[&#39;Go back to Main Entrance&#39;|MainEntrance]]&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;/div&gt;&lt;/div&gt;
 
 
@@ -2089,8 +2014,14 @@ SOME TEXT ABOUT THE CLOTH
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="43" name="Kitchen" tags="" position="1295,3432" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="36" name="Kitchen" tags="" position="1295,3432" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Upon entering the kitchen, you are greeted by a huge array of dishes, covering every countertop you can see, all filled with various desserts that never made it to the dinner table
+
+It&#39;s just V and I in this room.
+&lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
+    &lt;img src=&quot;images/V.png&quot; alt=&quot;V&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+	&lt;img src=&quot;images/Sloth.png&quot; alt=&quot;Silas&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+&lt;/figure&gt;
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
 
@@ -2110,7 +2041,7 @@ A further inspection reveals more of the same.
 &lt;div class=&quot;hide&quot; id =&quot;next2&quot;&gt;
 &lt;div class=&quot;gameDialog&quot;&gt;Current Location: Kitchen
 &lt;&lt;link [[&#39;Investigate Wine Cellar&#39;|WineCellar]]&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link [[&#39;Go back to Dining Hall&#39;|MainEntrance]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link [[&#39;Go back to Main Entrance&#39;|MainEntrance]]&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
 
 
@@ -2126,7 +2057,7 @@ A further inspection reveals more of the same.
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="44" name="Stage" tags="" position="297,3460" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="37" name="Stage" tags="" position="297,3460" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\I ran toward the stage, stopping at the final row of seats, to see that I am the only one in the theatre.
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
@@ -2148,7 +2079,8 @@ A further inspection reveals more of the same.
 
 &lt;div class=&quot;hide&quot; id =&quot;next3&quot;&gt;
 &lt;div class=&quot;gameDialog&quot;&gt;Current Location: Stage
-&lt;&lt;link [[&#39;Looking around to investigate&#39;|Chest Key]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link [[&#39;Look around to investigate&#39;|Chest Key]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link [[&#39;Go back to Theatre&#39;|Theatre]]&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
 
 
@@ -2168,59 +2100,46 @@ A further inspection reveals more of the same.
 &lt;&lt;/if&gt;&gt;
 
 &lt;div id=&quot;continue&quot;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="45" name="Chest Key" tags="" position="267,3626" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
-&lt;&lt;type 20ms&gt;&gt;\I look around the stage, and see a very small decorative key on the floor.
+</tw-passagedata><tw-passagedata pid="38" name="Chest Key" tags="" position="265,3628" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;type 20ms&gt;&gt;&lt;&lt;if not $player.has(&#39;Chest Key&#39;)&gt;&gt; \I look around the stage, and see a very small decorative key on the floor.
+&lt;&lt;/if&gt;&gt;&lt;&lt;if $player.has(&#39;Chest Key&#39;)&gt;&gt;\This was where I found the small decorative key, it looks too small to fit a door, I wonder where it could be used.&lt;&lt;/if&gt;&gt;
 
 &lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
     &lt;img src=&quot;images/chestKey Rusted.png&quot; alt=&quot;key&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
 &lt;/figure&gt;
-
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
 
 
 
 
-
-&lt;&lt;set _show to { start: 0, end: 5}&gt;&gt;
-
+&lt;&lt;if not $player.has(&#39;Chest Key&#39;)&gt;&gt;  
+&lt;&lt;set _show to { start: 0, end: 3}&gt;&gt;
 &lt;div class = &quot;hide&quot; id=&#39;next0&#39;&gt;
 &lt;&lt;speech &quot;Silas&quot;&gt;&gt;Is this the source of that sound I heard earlier?
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
-
-
-&lt;div class = &quot;hide&quot; id=&#39;next1&#39;&gt;
-&lt;&lt;speech &quot;Silas&quot;&gt;&gt;It looks too small for a door.
-&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
-
-&lt;div class = &quot;hide&quot; id=&#39;next2&#39;&gt;
-&lt;&lt;speech&gt;&gt; I say, as I pocket the key.
-&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
-
-&lt;&lt;if not $player.has(&#39;Chest Key&#39;)&gt;&gt;  
-&lt;div class=&quot;hide prevent-continue&quot; id=&#39;next3&#39;&gt;
-&lt;&lt;speech&gt;&gt;&lt;&lt;nobr&gt;&gt;&lt;&lt;linkreplace &#39;Pick up the key.&#39;&gt;&gt;
-            [“Key” added to the inventory]
+&lt;div class=&quot;hide prevent-continue&quot; id=&#39;next1&#39;&gt;
+&lt;&lt;speech&gt;&gt;&lt;&lt;nobr&gt;&gt;&lt;&lt;linkreplace &#39;Pick up the key&#39;&gt;&gt;
+            [“key” added to the inventory]
             &lt;&lt;pickup &#39;$player&#39; &#39;Chest Key&#39;&gt;&gt;
 			&lt;&lt;removeclass &quot;.prevent-continue&quot;&gt;&gt;
         &lt;&lt;/linkreplace&gt;&gt;
 		&lt;&lt;/nobr&gt;&gt;
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
-&lt;div class = &quot;hide&quot; id=&#39;next4&#39;&gt;
+&lt;div class = &quot;hide&quot; id=&#39;next2&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;It looks too small for a door.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+&lt;div class = &quot;hide&quot; id=&#39;next3&#39;&gt;
 &lt;&lt;speech &quot;Silas&quot;&gt;&gt;I wonder where it goes…
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
-
-​&lt;div class=&quot;hide&quot; id =&quot;next5&quot;&gt;
-&lt;div class=&quot;gameDialog&quot;&gt;
-&lt;&lt;link [[&#39;Go back to Dining Hall&#39;|MainEntrance]]&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;/div&gt;
-
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if $player.has(&#39;Chest Key&#39;)&gt;&gt;  
-​&lt;div class=&quot;hide&quot; id =&quot;next3&quot;&gt;
-&lt;div class=&quot;gameDialog&quot;&gt;
-&lt;&lt;link [[&#39;Go back to Dining Hall&#39;|MainEntrance]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;if $player.has(&#39;Chest Key&#39;)&gt;&gt;
+&lt;&lt;set _show to { start: 0, end: 0}&gt;&gt;
+&lt;div class = &quot;hide&quot; id=&#39;next0&#39;&gt;
+&lt;div class=&quot;gameDialog&quot;&gt;Current Location: Stage
+&lt;&lt;link [[&#39;Go back to Main Entrance&#39;|MainEntrance]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 
@@ -2237,7 +2156,8 @@ A further inspection reveals more of the same.
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="46" name="StudyRoom" tags="" position="610,3521" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="39" name="StudyRoom" tags="" position="610,3521" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\As I enter the room, I’m hit with a wave of dust. It’s clear no one’s been in here for quite a while.
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
@@ -2266,8 +2186,14 @@ A further inspection reveals more of the same.
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;div id=&quot;continue&quot;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="47" name="GuestRoom" tags="" position="758,3538" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;div id=&quot;continue&quot;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="GuestRoom" tags="" position="757,3538" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Looking around the room, I don’t see much, only a few spare beds and lanterns.
+
+It&#39;s just Piper and I in this room.
+&lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
+    &lt;img src=&quot;images/Pride_v1.png&quot; alt=&quot;Piper&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+	&lt;img src=&quot;images/Sloth.png&quot; alt=&quot;Silas&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+&lt;/figure&gt;
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
 
@@ -2298,7 +2224,7 @@ A further inspection reveals more of the same.
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="48" name="MasterBedroom" tags="" position="918,3559" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="41" name="MasterBedroom" tags="" position="918,3559" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Walking up to the Master Bedroom, I see that the lock to the door looks as though something has broken it, as it is miss-shapen.
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
@@ -2334,7 +2260,7 @@ A further inspection reveals more of the same.
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="49" name="Desk" tags="" position="613,3653" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="42" name="Desk" tags="" position="613,3653" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\As I looked around to see what the room has to offer, I noticed a picture in one of the desk drawers.
 Looking through the desk drawers, I find a picture of Mr. Green and
 Wrath, smiling at the camera.
@@ -2377,7 +2303,7 @@ Wrath, smiling at the camera.
 &lt;/div&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Photo]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="50" name="Photo" tags="" position="579,3816" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="43" name="Photo" tags="" position="579,3816" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\I state in shock, realising the situation.
 It occurred to me that Mr. Green and Wrath, while being the leaders of competing companies, never truly got in the way of one another. This was very odd for the two companies, as they both offered practically the same
 thing.
@@ -2433,7 +2359,7 @@ But now I realise…
 &lt;div class=&quot;gameDialog&quot;&gt;
 &lt;&lt;link [[&#39;Go back to Upstairs&#39;|Upstairs]]&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="51" name="InvestigateBedroom" tags="" position="918,3709" size="100,100">&lt;&lt;if $player.count() &lt; 3 &gt;&gt;  
+</tw-passagedata><tw-passagedata pid="44" name="InvestigateBedroom" tags="" position="918,3709" size="100,100">&lt;&lt;if $player.count() &lt; 3 &gt;&gt;  
 
 &lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Put a room photo here~
@@ -2494,7 +2420,7 @@ But now I realise…
 &lt;&lt;/if&gt;&gt;
 
 
-</tw-passagedata><tw-passagedata pid="52" name="Knife" tags="" position="916,3919" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="45" name="Knife" tags="" position="916,3919" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Looking through the room, you see a picture impaled on a wooden pillar by a small ornate knife, stained in blood. The knife has a small ruby in the hilt.
 
 &lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
@@ -2567,8 +2493,14 @@ I take the knife out of the wall, letting the picture fall to the floor.
 &lt;&lt;link [[&#39;Go back to Upstairs&#39;|Upstairs]]&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 ​
-</tw-passagedata><tw-passagedata pid="53" name="Game Room" tags="" position="1153,3558" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="46" name="Game Room" tags="" position="1153,3558" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Upon entering the games room, I see smashed gambling tables, strewn card sets, and overturned chairs. However, it appears that this is the only part of the room destroyed, as I see the bar, lounge area, and pool tables untouched.
+
+It&#39;s just Lucy and I in this room.
+&lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
+    &lt;img src=&quot;images/Lust_v1.png&quot; alt=&quot;Lucy&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+	&lt;img src=&quot;images/Sloth.png&quot; alt=&quot;Silas&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+&lt;/figure&gt;
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
 
@@ -2603,7 +2535,7 @@ I take the knife out of the wall, letting the picture fall to the floor.
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="54" name="WineCellar" tags="" position="1335,3642" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="47" name="WineCellar" tags="" position="1335,3642" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\As I descend the staircase into the cellar, I see a wall of casks, presumably filled with various wines.
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
@@ -2657,7 +2589,7 @@ I take the knife out of the wall, letting the picture fall to the floor.
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="55" name="InvestigateCellar" tags="" position="1335,3792" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="48" name="InvestigateCellar" tags="" position="1335,3792" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\I wonder if that key I got earlier would fit this lock.
 I put the key I found in the theatre in the lock with a satisfying click.
 Inside the chest, I find a pearl necklace and an assortment of
@@ -2676,7 +2608,7 @@ a few specific words and phrases.
 &lt;/section&gt;
 
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Necklace]]&gt;&gt;
-&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="56" name="Necklace" tags="" position="1335,3942" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="49" name="Necklace" tags="" position="1335,3942" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\As I move down the pile, it seems half of the letters aren’t even opened.
 The necklace, however, still shines bright as day.
 
@@ -2727,7 +2659,7 @@ The necklace, however, still shines bright as day.
 
 &lt;div class=&quot;hide&quot; id =&quot;next8&quot;&gt;
 &lt;div class=&quot;gameDialog&quot;&gt;
-&lt;&lt;link [[&#39;Go back to Dining Hall&#39;|MainEntrance]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link [[&#39;Go back to Main Entrance&#39;|MainEntrance]]&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
 
 &lt;&lt;/if&gt;&gt;
@@ -2752,6 +2684,38 @@ The necklace, however, still shines bright as day.
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 
+</tw-passagedata><tw-passagedata pid="50" name="Blood Splatter" tags="" position="971,2016" size="100,100">&lt;&lt;timed 1.2s&gt;&gt;
+	&lt;&lt;goto &quot;Mansion10&quot;&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+&lt;img class=&quot;center-img&quot; src = &quot;images/Blood_Splatter2.gif&quot; width=&quot;500&quot; height=&quot;700&quot;&gt;</tw-passagedata><tw-passagedata pid="51" name="Dining Hall" tags="" position="1074,2976" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;type 20ms&gt;&gt;\Mr. Green’s body is slumped forward on the grand dining table, starkly lit against the dark corners of the room.
+
+It&#39;s just Georgia and I in this room.
+&lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
+    &lt;img src=&quot;images/Gluttony.png&quot; alt=&quot;Georgia&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+	&lt;img src=&quot;images/Sloth.png&quot; alt=&quot;Silas&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+&lt;/figure&gt;
+&lt;&lt;/type&gt;&gt;
+&lt;/section&gt;
+
+&lt;div class=&quot;hide&quot; id =&quot;next0&quot;&gt;
+&lt;div class=&quot;gameDialog&quot;&gt;Current Location: Dining Hall
+&lt;&lt;link [[&#39;Go to Main Entrance&#39;|MainEntrance]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link [[&#39;Investigate Mr.Green&#39;|Green1]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;inventory&quot;&gt;
+&lt;&lt;link &#39;Check Inventory&#39;&gt;&gt;
+    &lt;&lt;dialog&#39;Inventory&#39;&gt;&gt;
+        You are carrying &lt;&lt;=$player.count()&gt;&gt; items in your inventory.
+        &lt;&lt;linkedinventory &#39; &#39; &#39;$player&#39; &#39;$container&#39;&gt;&gt;
+    &lt;&lt;/dialog&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;/div&gt;
+&lt;&lt;if $player.count() &gt; 0 &gt;&gt;
+&lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
 </tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
