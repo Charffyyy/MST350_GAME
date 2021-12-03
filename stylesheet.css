@@ -50,7 +50,6 @@ a:hover{
 
 button {
   transition-duration: 0.4s;
-  
 }
 
 .game-logo {
@@ -108,8 +107,6 @@ introduction {
   margin-right: auto;
 }
 
-
-
 .inventory a {
   font-family: Glass, VT323, monospace;
   position: absolute;
@@ -123,6 +120,17 @@ a {
   text-shadow: 0px 0px 20px #5dff4b;
   text-decoration: underline;
 }
+
+.explored a {
+  color: #dfe6e9;
+  text-shadow: 0px 0px 20px #dfe6e9;
+}
+
+.explored a:hover {
+  color: #b2bec3;
+  text-shadow: 0px 0px 20px #dfe6e9;
+}
+
 a:hover {
   color: #20bf6b;
   text-shadow: 0px 0px 20px #26de81;
@@ -231,8 +239,8 @@ a:hover {
     color: #a3ff99;
   	text-shadow: 0px 0px 20px #5dff4b;
 	font-family: Glass, VT323, monospace;
-	font-size: 28px;
-	line-height: 26px;
+	font-size: 20px;
+	line-height: 22px;
 }
 
 /* speech macro - Start */
@@ -242,7 +250,7 @@ a:hover {
 	padding: 8px 8px 8px 8px;
 	box-shadow: 5px 5px 3px Black;
   	position: fixed;
-	max-width: 1125px;
+	max-width: 53em;
   	width: 73.5%;
   	bottom: 8%;
   	min-height: 140px;
@@ -325,6 +333,17 @@ a:hover {
     border-color: #D980FA;
 }
 
+.V {
+  	color: #fff;
+  	text-shadow: 0px 0px 20px #ecf0f1;
+    border-color: #fff;
+
+}
+.V .avatar {
+	background-image: URL("images/VCropped.png");
+    border-color: #fff;
+}
+
 .Piper {
   	color: #0fbcf9;
   	text-shadow: 0px 0px 20px #4bcffa;
@@ -334,6 +353,21 @@ a:hover {
 .Piper .avatar {
 	background-image: URL("images/croppedPride.png");
     border-color: #0fbcf9;
+}
+
+.selectCharacter {
+  filter: opacity(0.3);
+  cursor: pointer;
+}
+
+.selectCharacter:hover {
+  filter: opacity(1) !important;
+  transition-duration: 0.4s;
+}
+
+.bright {
+  filter: opacity(1) !important;
+  transition-duration: 0.4s;
 }
 
 #choosePiper a {
@@ -366,8 +400,8 @@ a:hover {
     bottom: 25%;
 }
 #chooseV a {
-	color: #B53471;
-	text-shadow: 0px 0px 20px #ED4C67;
+  	color: #fff;
+  	text-shadow: 0px 0px 20px #ecf0f1;
 	position: absolute;
     left: 88%;
     bottom: 25%;

@@ -207,8 +207,6 @@ introduction {
   margin-right: auto;
 }
 
-
-
 .inventory a {
   font-family: Glass, VT323, monospace;
   position: absolute;
@@ -222,6 +220,17 @@ a {
   text-shadow: 0px 0px 20px #5dff4b;
   text-decoration: underline;
 }
+
+.explored a {
+  color: #dfe6e9;
+  text-shadow: 0px 0px 20px #dfe6e9;
+}
+
+.explored a:hover {
+  color: #b2bec3;
+  text-shadow: 0px 0px 20px #dfe6e9;
+}
+
 a:hover {
   color: #20bf6b;
   text-shadow: 0px 0px 20px #26de81;
@@ -1254,6 +1263,10 @@ Macro.add('dialogclose', {
 &lt;&lt;newinventory &#39;$container&#39; &#39;hammer&#39; &#39;knife&#39;&gt;&gt;
 &lt;&lt;set $accomplished_mission = new Set()&gt;&gt;
 &lt;&lt;set $talkedWithWilliam = false&gt;&gt;
+&lt;&lt;set $exploredTheatre = false&gt;&gt;
+&lt;&lt;set $exploredUpstairs = false&gt;&gt;
+&lt;&lt;set $exploredKitchen = false&gt;&gt;
+&lt;&lt;set $exploredDiningHall = false&gt;&gt;
 &lt;&lt;cacheaudio &quot;start_music&quot; &quot;music/I-Knew-a-Guy.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;death_music&quot; &quot;music/GreenDeath.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;letter_music&quot; &quot;music/LetterOpen.wav&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Green Dialogue" tags="" position="488,724" size="100,100">&lt;div&gt;
@@ -1754,7 +1767,7 @@ Well, I guess it’s my turn.
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Dining Hall]]&gt;&gt;
-&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="MainEntrance" tags="" position="1074,3103" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="MainEntrance" tags="" position="1072,3100" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\ This is the main entrance for the mansion, it seems to connect many different areas of the mansion. 
 
 It&#39;s just William and I at the main entrance.
@@ -1768,14 +1781,14 @@ It&#39;s just William and I at the main entrance.
 
 &lt;div class=&quot;hide&quot; id =&quot;next0&quot;&gt;
 &lt;div class=&quot;gameDialog&quot;&gt;Current Location: Main Entrance
-&lt;&lt;link [[&#39;Go to Dining Hall&#39;|Dining Hall]]&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link [[&#39;Go to Kitchen&#39;|Kitchen]]&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link [[&#39;Go to Theatre&#39;|Theatre]]&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link [[&#39;Go Upstairs&#39;|Upstairs]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;if $exploredDiningHall&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Go to Dining Hall&#39;|Dining Hall]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Go to Dining Hall&#39;|Dining Hall]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $exploredKitchen&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Go to Kitchen&#39;|Kitchen]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Go to Kitchen&#39;|Kitchen]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $exploredTheatre&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Go to Theatre&#39;|Theatre]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Go to Theatre&#39;|Theatre]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $exploredUpstairs&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Go Upstairs&#39;|Upstairs]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Go Upstairs&#39;|Upstairs]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;if not $talkedWithWilliam &amp;&amp; $player.has(&#39;Photo&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show William the Photo&#39;|Show William Photo]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $talkedWithWilliam &amp;&amp; $player.has(&#39;Necklace&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show William the Necklace&#39;|Show William Necklace]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if 1&gt;&gt;&lt;&lt;link [[&#39;Show William the Knife&#39;|Show William Knife]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $talkedWithWilliam &amp;&amp; $player.has(&#39;Knife&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show William the Knife&#39;|Show William Knife]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $talkedWithWilliam &amp;&amp; $player.has(&#39;Chest Key&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show William the Key&#39;|Show William the Key]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
 &lt;/div&gt;&lt;/div&gt;
@@ -1792,7 +1805,7 @@ It&#39;s just William and I at the main entrance.
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="26" name="Theatre" tags="" position="315,3319" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="26" name="Theatre" tags="" position="313,3319" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Walking into the entryway of the theatre, I am not surprised to see an expansive row of seats coupled with a lifted platform, presumably for performers. The stage is about thirty metres ahead of me.
 The area is very dimly lit by a few candles, and I cannot see what’s on the stage at all.
 As I get closer to the stage, I hear the soft sounds of sniffling and crying.
@@ -1830,6 +1843,7 @@ As they run away, I hear something metallic hit the ground. The running stops fo
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
+&lt;&lt;set $exploredTheatre = true&gt;&gt;
 </tw-passagedata><tw-passagedata pid="27" name="Green1" tags="" position="1321,2986" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Upon inspection of Mr. Green’s corpse, I noticed a torn piece of fine red cloth under one of the legs of the chair. It seems as though something was stuck under it, and ripped off once it was moved.
 While it doesn’t immediately ring any bells, I can’t help but have a sneaking suspicion that I’ve seen this before.
@@ -2025,7 +2039,7 @@ SOME TEXT ABOUT THE CLOTH
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="36" name="Kitchen" tags="" position="1294,3431" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;set $exploredUpstairs = true&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="Kitchen" tags="" position="1294,3430" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Upon entering the kitchen, you are greeted by a huge array of dishes, covering every countertop you can see, all filled with various desserts that never made it to the dinner table
 
 It&#39;s just V and I in this room.
@@ -2072,7 +2086,7 @@ It&#39;s just V and I in this room.
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="37" name="Stage" tags="" position="297,3460" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;set $exploredKitchen = true&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="Stage" tags="" position="297,3460" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\I ran toward the stage, stopping at the final row of seats, to see that I am the only one in the theatre.
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
@@ -2708,7 +2722,7 @@ The necklace, however, still shines bright as day.
 </tw-passagedata><tw-passagedata pid="50" name="Blood Splatter" tags="" position="971,2016" size="100,100">&lt;&lt;timed 1.2s&gt;&gt;
 	&lt;&lt;goto &quot;Mansion10&quot;&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
-&lt;img class=&quot;center-img&quot; src = &quot;images/Blood_Splatter2.gif&quot; width=&quot;500&quot; height=&quot;700&quot;&gt;</tw-passagedata><tw-passagedata pid="51" name="Dining Hall" tags="" position="1074,2976" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;img class=&quot;center-img&quot; src = &quot;images/Blood_Splatter2.gif&quot; width=&quot;500&quot; height=&quot;700&quot;&gt;</tw-passagedata><tw-passagedata pid="51" name="Dining Hall" tags="" position="1072,2976" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Mr. Green’s body is slumped forward on the grand dining table, starkly lit against the dark corners of the room.
 
 It&#39;s just Georgia and I in this room.
@@ -2742,6 +2756,7 @@ It&#39;s just Georgia and I in this room.
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
+&lt;&lt;set $exploredDiningHall = true&gt;&gt;
 </tw-passagedata><tw-passagedata pid="52" name="Show William Photo" tags="" position="849,3196" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;I approach William and pull out the picture of him and Mr.Green.
 
@@ -2930,7 +2945,7 @@ You have a lot of money, don’t you William?
 
 &lt;div class= &quot;hide&quot; id=&#39;next9&#39;&gt;
 &lt;&lt;speech &quot;William&quot;&gt;&gt;
-What would I have to gain from killing Mr. Green you idiot...and you say you’re a detective.
+What would I have to gain from killing Mr.Green you idiot... and you say you’re a detective.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class= &quot;hide&quot; id=&#39;next10&#39;&gt;
