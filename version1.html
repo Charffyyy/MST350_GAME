@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Green&#39;s Seven Guests" startnode="2" creator="Twine" creator-version="2.3.14" ifid="0CB710AC-D55A-4996-9C02-DE0CBFCF062B" zoom="1" format="SugarCube" format-version="2.34.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* SugarCube */
+	<tw-storydata name="Green&#39;s Seven Guests" startnode="6" creator="Twine" creator-version="2.3.14" ifid="0CB710AC-D55A-4996-9C02-DE0CBFCF062B" zoom="1" format="SugarCube" format-version="2.34.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* SugarCube */
 
 /* Fonts - Start */
 @import url("https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise:30");
@@ -1253,12 +1253,13 @@ Macro.add('dialogclose', {
 </tw-passagedata><tw-passagedata pid="3" name="StoryInit" tags="" position="427,71" size="100,100">&lt;&lt;newinventory &#39;$player&#39;&gt;&gt;
 &lt;&lt;newinventory &#39;$container&#39; &#39;hammer&#39; &#39;knife&#39;&gt;&gt;
 &lt;&lt;set $accomplished_mission = new Set()&gt;&gt;
+&lt;&lt;set $talkedWithWilliam = false&gt;&gt;
 &lt;&lt;cacheaudio &quot;start_music&quot; &quot;music/I-Knew-a-Guy.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;death_music&quot; &quot;music/GreenDeath.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;letter_music&quot; &quot;music/LetterOpen.wav&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Green Dialogue" tags="" position="488,724" size="100,100">&lt;div&gt;
 &lt;&lt;speech &quot;Green&quot;&gt;&gt;I&#39;m Green...&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
-&lt;&lt;button [[&quot;Lucy&quot;|Lucy Dialogue]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="letter" tags="" position="782,537" size="100,100">&lt;section class=&quot;paper&quot;&gt;\
+&lt;&lt;button [[&quot;Lucy&quot;|Lucy Dialogue]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="letter" tags="" position="781,537" size="100,100">&lt;section class=&quot;paper&quot;&gt;\
 	&lt;article class=&quot;paperheader&quot;&gt;
 														13 Eldersgrove Avenue
 															 Oxyn, Canada
@@ -1284,7 +1285,7 @@ Dear &lt;&lt;print $name&gt;&gt;,
 &lt;&lt;set _show to { start: 0, end: 2 }&gt;&gt;
 
 &lt;div id=&#39;next0&#39;&gt;
-&lt;&lt;speech &quot;Silas&quot;&gt;&gt;Thank you for the steady ride,” I say as the carriage driver leaves me at the base of the mansion.
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;&quot;Thank you for the steady ride,” I say as the carriage driver leaves me at the base of the mansion.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class=&#39;hide&#39; id=&#39;next1&#39;&gt;
@@ -1530,7 +1531,7 @@ No one is doubting that, you oaf.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next3&#39;&gt;
-&lt;&lt;speech&gt;&gt;I signed.
+&lt;&lt;speech&gt;&gt;I sighed.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next4&#39;&gt;
@@ -1676,7 +1677,7 @@ Why would you be any less of a suspect than her?
     &lt;&lt;/dialog&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion14]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="Mansion14" tags="" position="1138,2693" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion14]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="Mansion14" tags="" position="1138,2692" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Lucy meets my eyes for a split second, almost with a hint of worry, but I must’ve imagined it because she says that she’s going to look for a way out, and heads off as well.
 
 No one says anything to stop her.
@@ -1705,7 +1706,7 @@ At this point, it’s just V, Georgia, and I in the room.
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Mansion15]]&gt;&gt;
-&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="Mansion15" tags="" position="1079,2835" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="Mansion15" tags="" position="1078,2835" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\None of us are speaking, but I guess that’s to be expected when someone was murdered not twenty minutes ago.
 
 &lt;&lt;/type&gt;&gt;
@@ -1753,10 +1754,10 @@ Well, I guess it’s my turn.
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Dining Hall]]&gt;&gt;
-&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="MainEntrance" tags="" position="1077,3105" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
-&lt;&lt;type 20ms&gt;&gt;\ This is the main entrance for the house, it seems to connect many different areas of the house. 
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="MainEntrance" tags="" position="1075,3103" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;type 20ms&gt;&gt;\ This is the main entrance for the mansion, it seems to connect many different areas of the mansion. 
 
-It&#39;s just William and I in this room.
+It&#39;s just William and I at the main entrance.
 &lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
     &lt;img src=&quot;images/Wrath.png&quot; alt=&quot;Wrath&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
 	&lt;img src=&quot;images/Sloth.png&quot; alt=&quot;Silas&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
@@ -1771,6 +1772,12 @@ It&#39;s just William and I in this room.
 &lt;&lt;link [[&#39;Go to Kitchen&#39;|Kitchen]]&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link [[&#39;Go to Theatre&#39;|Theatre]]&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link [[&#39;Go Upstairs&#39;|Upstairs]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;if not $talkedWithWilliam &amp;&amp; $player.has(&#39;Photo&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show William the Photo&#39;|Show William Photo]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $talkedWithWilliam &amp;&amp; $player.has(&#39;Necklace&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show William the Necklace&#39;|Show William Necklace]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $talkedWithWilliam &amp;&amp; $player.has(&#39;Knife&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show William the Knife&#39;|Show William Knife]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $talkedWithWilliam &amp;&amp; $player.has(&#39;Chest Key&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show William the Key&#39;|Show William the Key]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
 &lt;/div&gt;&lt;/div&gt;
 
 &lt;div class=&quot;inventory&quot;&gt;
@@ -1785,7 +1792,7 @@ It&#39;s just William and I in this room.
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="26" name="Theatre" tags="" position="315,3320" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="26" name="Theatre" tags="" position="315,3319" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Walking into the entryway of the theatre, I am not surprised to see an expansive row of seats coupled with a lifted platform, presumably for performers. The stage is about thirty metres ahead of me.
 The area is very dimly lit by a few candles, and I cannot see what’s on the stage at all.
 As I get closer to the stage, I hear the soft sounds of sniffling and crying.
@@ -2014,7 +2021,7 @@ SOME TEXT ABOUT THE CLOTH
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="36" name="Kitchen" tags="" position="1295,3432" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="36" name="Kitchen" tags="" position="1294,3431" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Upon entering the kitchen, you are greeted by a huge array of dishes, covering every countertop you can see, all filled with various desserts that never made it to the dinner table
 
 It&#39;s just V and I in this room.
@@ -2034,14 +2041,18 @@ It&#39;s just V and I in this room.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next1&#39;&gt;
-&lt;&lt;speech&gt;&gt;I think gloomily.
-A further inspection reveals more of the same.
+&lt;&lt;speech&gt;&gt;I think gloomily. A further inspection reveals more of the same.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;hide&quot; id =&quot;next2&quot;&gt;
 &lt;div class=&quot;gameDialog&quot;&gt;Current Location: Kitchen
 &lt;&lt;link [[&#39;Investigate Wine Cellar&#39;|WineCellar]]&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link [[&#39;Go back to Main Entrance&#39;|MainEntrance]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;if $player.has(&#39;Chest Key&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show V the Key&#39;|Show V the Key]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $player.has(&#39;Necklace&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show V the Necklace&#39;|Show V Necklace]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $player.has(&#39;Knife&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show V the Knife&#39;|Show V Knife]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
 &lt;/div&gt;
 
 
@@ -2100,7 +2111,7 @@ A further inspection reveals more of the same.
 &lt;&lt;/if&gt;&gt;
 
 &lt;div id=&quot;continue&quot;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="38" name="Chest Key" tags="" position="265,3628" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="38" name="Chest Key" tags="" position="264,3628" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;&lt;&lt;if not $player.has(&#39;Chest Key&#39;)&gt;&gt; \I look around the stage, and see a very small decorative key on the floor.
 &lt;&lt;/if&gt;&gt;&lt;&lt;if $player.has(&#39;Chest Key&#39;)&gt;&gt;\This was where I found the small decorative key, it looks too small to fit a door, I wonder where it could be used.&lt;&lt;/if&gt;&gt;
 
@@ -2210,6 +2221,11 @@ It&#39;s just Piper and I in this room.
 &lt;div class=&quot;hide&quot; id =&quot;next2&quot;&gt;
 &lt;div class=&quot;gameDialog&quot;&gt;Current Location: Guest Room
 &lt;&lt;link [[&#39;Go back to Upstairs&#39;|Upstairs]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;if $player.has(&#39;Necklace&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show Piper the Necklace&#39;|Show Piper Necklace]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $player.has(&#39;Knife&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show Piper the Knife&#39;|Show Piper Knife]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $player.has(&#39;Chest Key&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show Piper the Key&#39;|Show Piper the Key]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;inventory&quot;&gt;
@@ -2244,7 +2260,7 @@ It&#39;s just Piper and I in this room.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;hide&quot; id =&quot;next3&quot;&gt;
-&lt;div class=&quot;gameDialog&quot;&gt;Current Location: Muster Bedroom
+&lt;div class=&quot;gameDialog&quot;&gt;Current Location: Master Bedroom
 &lt;&lt;link [[&#39;Investigate the Bedroom&#39;|InvestigateBedroom]]&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
 
@@ -2493,7 +2509,7 @@ I take the knife out of the wall, letting the picture fall to the floor.
 &lt;&lt;link [[&#39;Go back to Upstairs&#39;|Upstairs]]&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 ​
-</tw-passagedata><tw-passagedata pid="46" name="Game Room" tags="" position="1153,3558" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="46" name="Game Room" tags="" position="1153,3557" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Upon entering the games room, I see smashed gambling tables, strewn card sets, and overturned chairs. However, it appears that this is the only part of the room destroyed, as I see the bar, lounge area, and pool tables untouched.
 
 It&#39;s just Lucy and I in this room.
@@ -2521,6 +2537,11 @@ It&#39;s just Lucy and I in this room.
 &lt;div class=&quot;hide&quot; id =&quot;next3&quot;&gt;
 &lt;div class=&quot;gameDialog&quot;&gt;Current Location: Game Room
 &lt;&lt;link [[&#39;Go back to Upstairs&#39;|Upstairs]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;if $player.has(&#39;Necklace&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show Lucy the Necklace&#39;|Show Lucy Necklace]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $player.has(&#39;Knife&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show Lucy the Knife&#39;|Show Lucy Knife]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $player.has(&#39;Chest Key&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show Lucy the Key&#39;|Show Lucy the Key]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;inventory&quot;&gt;
@@ -2535,7 +2556,7 @@ It&#39;s just Lucy and I in this room.
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="47" name="WineCellar" tags="" position="1335,3642" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="47" name="WineCellar" tags="" position="1335,3641" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\As I descend the staircase into the cellar, I see a wall of casks, presumably filled with various wines.
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
@@ -2563,7 +2584,7 @@ It&#39;s just Lucy and I in this room.
 
 &lt;div class=&quot;hide&quot; id =&quot;next4&quot;&gt;
 &lt;div class=&quot;gameDialog&quot;&gt;Current Location: Wine Cellar
-&lt;&lt;link [[&#39;Open the Cellar&#39;|InvestigateCellar]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link [[&#39;Open the Chest&#39;|InvestigateChest]]&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link [[&#39;Go back to Dining Hall&#39;|MainEntrance]]&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
 
@@ -2589,7 +2610,7 @@ It&#39;s just Lucy and I in this room.
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="48" name="InvestigateCellar" tags="" position="1335,3792" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="48" name="InvestigateChest" tags="" position="1334,3780" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\I wonder if that key I got earlier would fit this lock.
 I put the key I found in the theatre in the lock with a satisfying click.
 Inside the chest, I find a pearl necklace and an assortment of
@@ -2702,6 +2723,11 @@ It&#39;s just Georgia and I in this room.
 &lt;div class=&quot;gameDialog&quot;&gt;Current Location: Dining Hall
 &lt;&lt;link [[&#39;Go to Main Entrance&#39;|MainEntrance]]&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link [[&#39;Investigate Mr.Green&#39;|Green1]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;if $player.has(&#39;Necklace&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show Georgia the Necklace&#39;|Show Georgia Necklace]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $player.has(&#39;Knife&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show Georgia the Knife&#39;|Show Georgia Knife]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $player.has(&#39;Chest Key&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show Georgia the Key&#39;|Show Georgia the Key]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
 &lt;/div&gt;&lt;/div&gt;
 
 &lt;div class=&quot;inventory&quot;&gt;
@@ -2716,6 +2742,856 @@ It&#39;s just Georgia and I in this room.
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
+</tw-passagedata><tw-passagedata pid="52" name="Show William Photo" tags="" position="849,3196" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;type 20ms&gt;&gt;I approach William and pull out the picture of him and Mr.Green.
+
+&lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
+    &lt;img src=&quot;images/bloodyKnife.png&quot; alt=&quot;key&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+&lt;/figure&gt;
+&lt;&lt;/type&gt;&gt;
+&lt;/section&gt;
+&lt;&lt;set $accomplished_mission.add(&quot;ShowWilliamPhoto&quot;)&gt;&gt;
+&lt;&lt;set $talkedWithWilliam = true&gt;&gt;
+&lt;&lt;set _show to { start: 0, end: 13}&gt;&gt;
+&lt;div class= &quot;hide&quot; id=&#39;next0&#39;&gt;
+&lt;&lt;speech &quot;William&quot;&gt;&gt;
+What?!
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next1&#39;&gt;
+&lt;&lt;speech&gt;&gt;William yells in surprise.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next2&#39;&gt;
+&lt;&lt;speech &quot;William&quot;&gt;&gt;
+How did you get this?
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next3&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;Why the surprise? It’s just a picture isn’t it...
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next4&#39;&gt;
+&lt;&lt;speech&gt;&gt;I say teasingly.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next5&#39;&gt;
+&lt;&lt;speech &quot;William&quot;&gt;&gt;
+Are you an idiot? Do you have any idea what-
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next6&#39;&gt;
+&lt;&lt;speech &gt;&gt;William stops abruptly, realising he said too much.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next7&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Well, I trust you understand the predicament. In that case, I require your help.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next8&#39;&gt;
+&lt;&lt;speech&gt;&gt;I say, waving the picture.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next9&#39;&gt;
+&lt;&lt;speech &quot;William&quot;&gt;&gt;
+...
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next10&#39;&gt;
+&lt;&lt;speech &quot;William&quot;&gt;&gt;
+Fine.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next11&#39;&gt;
+&lt;&lt;speech&gt;&gt;William says eventually, scowling as he shakes my hand.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next12&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Excellent!
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next13&#39;&gt;
+&lt;&lt;speech&gt;&gt;You can now show clues to William.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;inventory&quot;&gt;
+&lt;&lt;link &#39;Check Inventory&#39;&gt;&gt;
+    &lt;&lt;dialog&#39;Inventory&#39;&gt;&gt;
+        You are carrying &lt;&lt;=$player.count()&gt;&gt; items in your inventory.
+        &lt;&lt;linkedinventory &#39; &#39; &#39;$player&#39; &#39;$container&#39;&gt;&gt;
+    &lt;&lt;/dialog&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;/div&gt;
+&lt;&lt;if $player.count() &gt; 4 &gt;&gt;
+&lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="53" name="Show William Necklace" tags="" position="855,3082" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;type 20ms&gt;&gt;I approach William and show him the necklace.
+
+&lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
+    &lt;img src=&quot;images/Necklace.png&quot; alt=&quot;key&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+&lt;/figure&gt;
+&lt;&lt;/type&gt;&gt;
+&lt;/section&gt;
+&lt;&lt;set $accomplished_mission.add(&quot;ShowWilliamNecklace&quot;)&gt;&gt;
+&lt;&lt;set _show to { start: 0, end: 6}&gt;&gt;
+&lt;div class= &quot;hide&quot; id=&#39;next0&#39;&gt;
+&lt;&lt;speech &quot;William&quot;&gt;&gt;
+Hmph. I know you wouldn’t be able to afford something like this...who did you take it from?
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next1&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+I didn’t steal it, I found it. Why would I wear something like this? And there appears to be blood on it, so I was wondering if you knew anything.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next2&#39;&gt;
+&lt;&lt;speech &quot;William&quot;&gt;&gt;
+Well I just told you it’s worth a lot...who do you think has a lot of money?
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next3&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+I don’t know, that’s why I’m asking you...
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next4&#39;&gt;
+&lt;&lt;speech &quot;William&quot;&gt;&gt;
+Are you serious? Just take a look around...I’d say this belongs to Lucy, Georgia, or Piper as they’re the only females here...
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next5&#39;&gt;
+&lt;&lt;speech&gt;&gt;I sigh&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next6&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Okay, thanks.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;inventory&quot;&gt;
+&lt;&lt;link &#39;Check Inventory&#39;&gt;&gt;
+    &lt;&lt;dialog&#39;Inventory&#39;&gt;&gt;
+        You are carrying &lt;&lt;=$player.count()&gt;&gt; items in your inventory.
+        &lt;&lt;linkedinventory &#39; &#39; &#39;$player&#39; &#39;$container&#39;&gt;&gt;
+    &lt;&lt;/dialog&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;/div&gt;
+&lt;&lt;if $player.count() &gt; 4 &gt;&gt;
+&lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="54" name="Show William Knife" tags="" position="1257,3107" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;type 20ms&gt;&gt;I approach William and show him the bloody knife.
+
+&lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
+    &lt;img src=&quot;images/bloodyKnife.png&quot; alt=&quot;key&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+&lt;/figure&gt;
+&lt;&lt;/type&gt;&gt;
+&lt;/section&gt;
+&lt;&lt;set $accomplished_mission.add(&quot;ShowWilliamKnife&quot;)&gt;&gt;
+&lt;&lt;set _show to { start: 0, end: 11}&gt;&gt;
+&lt;div class= &quot;hide&quot; id=&#39;next0&#39;&gt;
+&lt;&lt;speech &quot;William&quot;&gt;&gt;
+What’s this then?
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next1&#39;&gt;
+&lt;&lt;speech&gt;&gt;William says in disbelief, looking at the knife.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next2&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+I believe I’ve found our murder weapon.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next3&#39;&gt;
+&lt;&lt;speech &quot;William&quot;&gt;&gt;Good lord...
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next4&#39;&gt;
+&lt;&lt;speech&gt;&gt;says William, shaking his head.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next5&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Well?
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next6&#39;&gt;
+&lt;&lt;speech &quot;William&quot;&gt;&gt;
+Hmm...the ruby on this hilt shows that it was pretty expensive...I doubt this belonged to Georgia or Piper, although it could’ve been a gift.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next7&#39;&gt;
+&lt;&lt;speech&gt;&gt;William says with a glance.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next8&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+You have a lot of money, don’t you William?
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next9&#39;&gt;
+&lt;&lt;speech &quot;William&quot;&gt;&gt;
+What would I have to gain from killing Mr. Green you idiot...and you say you’re a detective.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next10&#39;&gt;
+&lt;&lt;speech&gt;&gt;William says, a scowl on his face.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next11&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Alright then.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;inventory&quot;&gt;
+&lt;&lt;link &#39;Check Inventory&#39;&gt;&gt;
+    &lt;&lt;dialog&#39;Inventory&#39;&gt;&gt;
+        You are carrying &lt;&lt;=$player.count()&gt;&gt; items in your inventory.
+        &lt;&lt;linkedinventory &#39; &#39; &#39;$player&#39; &#39;$container&#39;&gt;&gt;
+    &lt;&lt;/dialog&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;/div&gt;
+&lt;&lt;if $player.count() &gt; 4 &gt;&gt;
+&lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="55" name="Show William the Key" tags="" position="1303,3254" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;type 20ms&gt;&gt;I approach William and show him the key that I found earlier in the theatre.
+
+&lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
+    &lt;img src=&quot;images/chestKey Rusted.png&quot; alt=&quot;key&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+&lt;/figure&gt;
+&lt;&lt;/type&gt;&gt;
+&lt;/section&gt;
+&lt;&lt;set $accomplished_mission.add(&quot;ShowWilliamKey&quot;)&gt;&gt;
+&lt;&lt;set _show to { start: 0, end: 7}&gt;&gt;
+&lt;div class= &quot;hide&quot; id=&#39;next0&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Do you know who this belonged to?
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next1&#39;&gt;
+&lt;&lt;speech&gt;&gt;William side-eyes the key.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next2&#39;&gt;
+&lt;&lt;speech &quot;William&quot;&gt;&gt;
+Well I do know that this is probably a chest key. It looks small enough to fit a lock like that.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next3&#39;&gt;
+&lt;&lt;speech&gt;&gt;William says, questioningly.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next4&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+How do you know that?
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next5&#39;&gt;
+&lt;&lt;speech &quot;William&quot;&gt;&gt;
+Just look at it. Does it look like it fits a door?
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next6&#39;&gt;
+&lt;&lt;speech&gt;&gt;William asks, sighing.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next7&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Guess not...
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+
+&lt;div class=&quot;inventory&quot;&gt;
+&lt;&lt;link &#39;Check Inventory&#39;&gt;&gt;
+    &lt;&lt;dialog&#39;Inventory&#39;&gt;&gt;
+        You are carrying &lt;&lt;=$player.count()&gt;&gt; items in your inventory.
+        &lt;&lt;linkedinventory &#39; &#39; &#39;$player&#39; &#39;$container&#39;&gt;&gt;
+    &lt;&lt;/dialog&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;/div&gt;
+&lt;&lt;if $player.count() &gt; 4 &gt;&gt;
+&lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="56" name="Show Lucy Necklace" tags="" position="1038,3708" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;type 20ms&gt;&gt;I approach Lucy and show her the necklace.
+
+&lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
+    &lt;img src=&quot;images/Necklace.png&quot; alt=&quot;key&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+&lt;/figure&gt;
+&lt;&lt;/type&gt;&gt;
+&lt;/section&gt;
+&lt;&lt;set $accomplished_mission.add(&quot;ShowLucyNecklace&quot;)&gt;&gt;
+&lt;&lt;set _show to { start: 0, end: 3}&gt;&gt;
+&lt;div class= &quot;hide&quot; id=&#39;next0&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Do you know who this might belong to?
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next1&#39;&gt;
+&lt;&lt;speech&gt;&gt;Lucy looks at the necklace, and then back at me.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next2&#39;&gt;
+&lt;&lt;speech &quot;Lucy&quot;&gt;&gt;
+This is pretty expensive...I don’t really know, but I would assume V, as they’ve been pretty secretive all night.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next3&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Okay, I’ll keep that in mind.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;inventory&quot;&gt;
+&lt;&lt;link &#39;Check Inventory&#39;&gt;&gt;
+    &lt;&lt;dialog&#39;Inventory&#39;&gt;&gt;
+        You are carrying &lt;&lt;=$player.count()&gt;&gt; items in your inventory.
+        &lt;&lt;linkedinventory &#39; &#39; &#39;$player&#39; &#39;$container&#39;&gt;&gt;
+    &lt;&lt;/dialog&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;/div&gt;
+&lt;&lt;if $player.count() &gt; 4 &gt;&gt;
+&lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="57" name="Show Lucy Knife" tags="" position="1155,3708" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;type 20ms&gt;&gt;I approach Lucy and show her the bloody knife.
+
+&lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
+    &lt;img src=&quot;images/bloodyKnife.png&quot; alt=&quot;key&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+&lt;/figure&gt;
+&lt;&lt;/type&gt;&gt;
+&lt;/section&gt;
+&lt;&lt;set $accomplished_mission.add(&quot;ShowLucyKnife&quot;)&gt;&gt;
+&lt;&lt;set _show to { start: 0, end: 9}&gt;&gt;
+&lt;div class= &quot;hide&quot; id=&#39;next0&#39;&gt;
+&lt;&lt;speech &quot;Lucy&quot;&gt;&gt;
+Is that-
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next1&#39;&gt;
+&lt;&lt;speech&gt;&gt;Lust starts.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next2&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Yup, looks like the murder weapon.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next3&#39;&gt;
+&lt;&lt;speech &quot;Lucy&quot;&gt;&gt;Wow...where did you find it?
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next4&#39;&gt;
+&lt;&lt;speech&gt;&gt;Lucy asks, inspecting the blood.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next5&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+I found this hidden area in Mr. Green’s bedroom that had this knife in the wall, piercing a picture.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next6&#39;&gt;
+&lt;&lt;speech &quot;Lucy&quot;&gt;&gt;
+Wow...I had no idea he was so secretive.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next7&#39;&gt;
+&lt;&lt;speech&gt;&gt;Lucy says with a shocked expression.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next8&#39;&gt;
+&lt;&lt;speech &quot;Lucy&quot;&gt;&gt;
+Sorry, but I really have no idea other than that it looks expensive.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next9&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+I see...all good.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;inventory&quot;&gt;
+&lt;&lt;link &#39;Check Inventory&#39;&gt;&gt;
+    &lt;&lt;dialog&#39;Inventory&#39;&gt;&gt;
+        You are carrying &lt;&lt;=$player.count()&gt;&gt; items in your inventory.
+        &lt;&lt;linkedinventory &#39; &#39; &#39;$player&#39; &#39;$container&#39;&gt;&gt;
+    &lt;&lt;/dialog&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;/div&gt;
+&lt;&lt;if $player.count() &gt; 4 &gt;&gt;
+&lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="58" name="Show Lucy the Key" tags="" position="1275,3761" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;type 20ms&gt;&gt;I approach Lucy and show her the key that I found earlier in the theatre.
+
+&lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
+    &lt;img src=&quot;images/chestKey Rusted.png&quot; alt=&quot;key&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+&lt;/figure&gt;
+&lt;&lt;/type&gt;&gt;
+&lt;/section&gt;
+&lt;&lt;set $accomplished_mission.add(&quot;ShowLucyKey&quot;)&gt;&gt;
+&lt;&lt;set _show to { start: 0, end: 7}&gt;&gt;
+&lt;div class= &quot;hide&quot; id=&#39;next0&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Do you know where this might go?
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next1&#39;&gt;
+&lt;&lt;speech &quot;Lucy&quot;&gt;&gt;
+Hmm..looks too small to go into a door. Might go into something else, although I can’t think of what.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next2&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Alright, thanks for the help
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;inventory&quot;&gt;
+&lt;&lt;link &#39;Check Inventory&#39;&gt;&gt;
+    &lt;&lt;dialog&#39;Inventory&#39;&gt;&gt;
+        You are carrying &lt;&lt;=$player.count()&gt;&gt; items in your inventory.
+        &lt;&lt;linkedinventory &#39; &#39; &#39;$player&#39; &#39;$container&#39;&gt;&gt;
+    &lt;&lt;/dialog&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;/div&gt;
+&lt;&lt;if $player.count() &gt; 4 &gt;&gt;
+&lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="59" name="Show Georgia Necklace" tags="" position="913,2880" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;type 20ms&gt;&gt;I approach Georgia and show her the necklace.
+
+&lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
+    &lt;img src=&quot;images/Necklace.png&quot; alt=&quot;key&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+&lt;/figure&gt;
+&lt;&lt;/type&gt;&gt;
+&lt;/section&gt;
+&lt;&lt;set $accomplished_mission.add(&quot;ShowGeorgiaNecklace&quot;)&gt;&gt;
+&lt;&lt;set _show to { start: 0, end: 7}&gt;&gt;
+&lt;div class= &quot;hide&quot; id=&#39;next0&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Do you know who this might belong to?
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next1&#39;&gt;
+&lt;&lt;speech&gt;&gt;Georgia looks at the necklace, wide-eyed.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next2&#39;&gt;
+&lt;&lt;speech &quot;Georgia&quot;&gt;&gt;
+Wow I could never afford something like this...
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next3&#39;&gt;
+&lt;&lt;speech &gt;&gt;Georgia says, apparently too transfixed to notice the blood on it.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next4&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Well yes, I think as well.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next5&#39;&gt;
+&lt;&lt;speech &quot;Georgia&quot;&gt;&gt;
+The lace looks pretty worn down though...either someone’s had this for a while, or its been stretched, or something of the sort.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next6&#39;&gt;
+&lt;&lt;speech&gt;&gt;Georgia says in examination.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next7&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Hmm, that’s actually pretty useful, thanks.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+
+&lt;div class=&quot;inventory&quot;&gt;
+&lt;&lt;link &#39;Check Inventory&#39;&gt;&gt;
+    &lt;&lt;dialog&#39;Inventory&#39;&gt;&gt;
+        You are carrying &lt;&lt;=$player.count()&gt;&gt; items in your inventory.
+        &lt;&lt;linkedinventory &#39; &#39; &#39;$player&#39; &#39;$container&#39;&gt;&gt;
+    &lt;&lt;/dialog&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;/div&gt;
+&lt;&lt;if $player.count() &gt; 4 &gt;&gt;
+&lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="60" name="Show Georgia Knife" tags="" position="853,3000" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;type 20ms&gt;&gt;I approach Georgia and show her the bloody knife.
+
+&lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
+    &lt;img src=&quot;images/bloodyKnife.png&quot; alt=&quot;key&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+&lt;/figure&gt;
+&lt;&lt;/type&gt;&gt;
+&lt;/section&gt;
+&lt;&lt;set $accomplished_mission.add(&quot;ShowGeorgiaKnife&quot;)&gt;&gt;
+&lt;&lt;set _show to { start: 0, end: 7}&gt;&gt;
+&lt;div class= &quot;hide&quot; id=&#39;next0&#39;&gt;
+&lt;&lt;speech &quot;Georgia&quot;&gt;&gt;
+Wow, so that’s it then?
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next1&#39;&gt;
+&lt;&lt;speech&gt;&gt;Georgia starts.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next2&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Yup, looks like the murder weapon.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next3&#39;&gt;
+&lt;&lt;speech &quot;Georgia&quot;&gt;&gt;Aside from the blood, that ruby must’ve cost a pretty penny.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next4&#39;&gt;
+&lt;&lt;speech&gt;&gt;Georgia says,wide-eyed.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next5&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+That’s true...who has all this money?
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next6&#39;&gt;
+&lt;&lt;speech &quot;Georgia&quot;&gt;&gt;
+Lucy did inherit a small fortune from her parents when they died, but I know this could’ve easily belonged to William or someone with much more.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next7&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+That’s true...makes it hard to narrow down. Thanks a lot.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;inventory&quot;&gt;
+&lt;&lt;link &#39;Check Inventory&#39;&gt;&gt;
+    &lt;&lt;dialog&#39;Inventory&#39;&gt;&gt;
+        You are carrying &lt;&lt;=$player.count()&gt;&gt; items in your inventory.
+        &lt;&lt;linkedinventory &#39; &#39; &#39;$player&#39; &#39;$container&#39;&gt;&gt;
+    &lt;&lt;/dialog&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;/div&gt;
+&lt;&lt;if $player.count() &gt; 4 &gt;&gt;
+&lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="61" name="Show Georgia the Key" tags="" position="1200,2861" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;type 20ms&gt;&gt;I approach Georgia and show her the key that I found earlier in the theatre.
+
+&lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
+    &lt;img src=&quot;images/chestKey Rusted.png&quot; alt=&quot;key&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+&lt;/figure&gt;
+&lt;&lt;/type&gt;&gt;
+&lt;/section&gt;
+&lt;&lt;set $accomplished_mission.add(&quot;ShowGeorgiaKey&quot;)&gt;&gt;
+&lt;&lt;set _show to { start: 0, end: 3}&gt;&gt;
+&lt;div class= &quot;hide&quot; id=&#39;next0&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Do you know where this might go?
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next1&#39;&gt;
+&lt;&lt;speech&gt;&gt;Georgia examines the key.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next2&#39;&gt;
+&lt;&lt;speech &quot;Georgia&quot;&gt;&gt;
+Well, it’s really small, so I guess it wouldn’t fit a door.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next3&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+That’s a good point, thanks.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+
+&lt;div class=&quot;inventory&quot;&gt;
+&lt;&lt;link &#39;Check Inventory&#39;&gt;&gt;
+    &lt;&lt;dialog&#39;Inventory&#39;&gt;&gt;
+        You are carrying &lt;&lt;=$player.count()&gt;&gt; items in your inventory.
+        &lt;&lt;linkedinventory &#39; &#39; &#39;$player&#39; &#39;$container&#39;&gt;&gt;
+    &lt;&lt;/dialog&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;/div&gt;
+&lt;&lt;if $player.count() &gt; 4 &gt;&gt;
+&lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="62" name="Show Piper Necklace" tags="" position="916,3436" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;type 20ms&gt;&gt;I approach Piper and show her the necklace.
+
+&lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
+    &lt;img src=&quot;images/Necklace.png&quot; alt=&quot;key&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+&lt;/figure&gt;
+&lt;&lt;/type&gt;&gt;
+&lt;/section&gt;
+&lt;&lt;set $accomplished_mission.add(&quot;ShowPiperNecklace&quot;)&gt;&gt;
+&lt;&lt;set _show to { start: 0, end: 5}&gt;&gt;
+&lt;div class= &quot;hide&quot; id=&#39;next0&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Do you know who this might belong to?
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next1&#39;&gt;
+&lt;&lt;speech&gt;&gt;Piper sees the blood on the necklace&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next2&#39;&gt;
+&lt;&lt;speech &quot;Piper&quot;&gt;&gt;
+Wow, where’d you find this?
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next3&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+In a chest.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next4&#39;&gt;
+&lt;&lt;speech &quot;Piper&quot;&gt;&gt;
+So they’re trying to hide it... must be either Lucy’s or ...maybe V? Although I guess maybe it could be anyone’s, people wear anything nowadays...
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next5&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+That’s true, I won’t point fingers just yet.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;inventory&quot;&gt;
+&lt;&lt;link &#39;Check Inventory&#39;&gt;&gt;
+    &lt;&lt;dialog&#39;Inventory&#39;&gt;&gt;
+        You are carrying &lt;&lt;=$player.count()&gt;&gt; items in your inventory.
+        &lt;&lt;linkedinventory &#39; &#39; &#39;$player&#39; &#39;$container&#39;&gt;&gt;
+    &lt;&lt;/dialog&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;/div&gt;
+&lt;&lt;if $player.count() &gt; 4 &gt;&gt;
+&lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="63" name="Show Piper Knife" tags="" position="757,3688" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;type 20ms&gt;&gt;I approach Piper and show her the bloody knife.
+
+&lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
+    &lt;img src=&quot;images/bloodyKnife.png&quot; alt=&quot;key&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+&lt;/figure&gt;
+&lt;&lt;/type&gt;&gt;
+&lt;/section&gt;
+&lt;&lt;set $accomplished_mission.add(&quot;ShowPiperKnife&quot;)&gt;&gt;
+&lt;&lt;set _show to { start: 0, end: 6}&gt;&gt;
+&lt;div class= &quot;hide&quot; id=&#39;next0&#39;&gt;
+&lt;&lt;speech &quot;Piper&quot;&gt;&gt;
+Is that a bloody knife?
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next1&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Yes, I found it upstairs. Anything come to mind?
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next2&#39;&gt;
+&lt;&lt;speech &quot;Piper&quot;&gt;&gt;
+That ruby looks expensive...few people could’ve afforded something like that.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next3&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Makes sense.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next4&#39;&gt;
+&lt;&lt;speech &quot;Piper&quot;&gt;&gt;
+I would say someone like William comes to mind, but this also looks like
+something V might use based solely off it’s ornate design.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next5&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Good points all around.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next6&#39;&gt;
+&lt;&lt;speech&gt;&gt;I thank her as, as I walk away.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;inventory&quot;&gt;
+&lt;&lt;link &#39;Check Inventory&#39;&gt;&gt;
+    &lt;&lt;dialog&#39;Inventory&#39;&gt;&gt;
+        You are carrying &lt;&lt;=$player.count()&gt;&gt; items in your inventory.
+        &lt;&lt;linkedinventory &#39; &#39; &#39;$player&#39; &#39;$container&#39;&gt;&gt;
+    &lt;&lt;/dialog&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;/div&gt;
+&lt;&lt;if $player.count() &gt; 4 &gt;&gt;
+&lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="64" name="Show Piper the Key" tags="" position="645,3397" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;type 20ms&gt;&gt;I approach Piper and show her the key that I found earlier in the theatre.
+
+&lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
+    &lt;img src=&quot;images/chestKey Rusted.png&quot; alt=&quot;key&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+&lt;/figure&gt;
+&lt;&lt;/type&gt;&gt;
+&lt;/section&gt;
+&lt;&lt;set $accomplished_mission.add(&quot;ShowPiperKey&quot;)&gt;&gt;
+&lt;&lt;set _show to { start: 0, end: 6}&gt;&gt;
+&lt;div class= &quot;hide&quot; id=&#39;next0&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Do you know where this might go?
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next1&#39;&gt;
+&lt;&lt;speech&gt;&gt;Piper looks at the key.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next2&#39;&gt;
+&lt;&lt;speech &quot;Piper&quot;&gt;&gt;
+Judging from how small it is, I severely doubt this would go to a door... looks more like a clock key or something.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next3&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Interesting take, but helpful.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next4&#39;&gt;
+&lt;&lt;speech &quot;Piper&quot;&gt;&gt;
+Do you need any help?
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next5&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Hopefully later when we pin the suspect down.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next6&#39;&gt;
+&lt;&lt;speech&gt;&gt;I say as I turn.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+
+&lt;div class=&quot;inventory&quot;&gt;
+&lt;&lt;link &#39;Check Inventory&#39;&gt;&gt;
+    &lt;&lt;dialog&#39;Inventory&#39;&gt;&gt;
+        You are carrying &lt;&lt;=$player.count()&gt;&gt; items in your inventory.
+        &lt;&lt;linkedinventory &#39; &#39; &#39;$player&#39; &#39;$container&#39;&gt;&gt;
+    &lt;&lt;/dialog&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;/div&gt;
+&lt;&lt;if $player.count() &gt; 4 &gt;&gt;
+&lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="65" name="Show V Necklace" tags="" position="1160,3436" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;type 20ms&gt;&gt;I approach V and show her the necklace.
+
+&lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
+    &lt;img src=&quot;images/Necklace.png&quot; alt=&quot;key&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+&lt;/figure&gt;
+&lt;&lt;/type&gt;&gt;
+&lt;/section&gt;
+&lt;&lt;set $accomplished_mission.add(&quot;ShowVNecklace&quot;)&gt;&gt;
+&lt;&lt;set _show to { start: 0, end: 3}&gt;&gt;
+&lt;div class= &quot;hide&quot; id=&#39;next0&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Do you know who this might belong to?
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next1&#39;&gt;
+&lt;&lt;speech&gt;&gt;V, again, gives no notion that they heard me other than a glance in my direction.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next2&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Doesn’t look like something you’d wear, but just thought I’d ask.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next3&#39;&gt;
+&lt;&lt;speech&gt;&gt;I murmur.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;inventory&quot;&gt;
+&lt;&lt;link &#39;Check Inventory&#39;&gt;&gt;
+    &lt;&lt;dialog&#39;Inventory&#39;&gt;&gt;
+        You are carrying &lt;&lt;=$player.count()&gt;&gt; items in your inventory.
+        &lt;&lt;linkedinventory &#39; &#39; &#39;$player&#39; &#39;$container&#39;&gt;&gt;
+    &lt;&lt;/dialog&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;/div&gt;
+&lt;&lt;if $player.count() &gt; 4 &gt;&gt;
+&lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="66" name="Show V Knife" tags="" position="1476,3434" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;type 20ms&gt;&gt;I approach V and show her the bloody knife.
+
+&lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
+    &lt;img src=&quot;images/bloodyKnife.png&quot; alt=&quot;key&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+&lt;/figure&gt;
+&lt;&lt;/type&gt;&gt;
+&lt;/section&gt;
+&lt;&lt;set $accomplished_mission.add(&quot;ShowVKnife&quot;)&gt;&gt;
+&lt;&lt;set _show to { start: 0, end: 3}&gt;&gt;
+&lt;div class= &quot;hide&quot; id=&#39;next0&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Hey, I think I found the murder weapon. Gonna just stare this time?
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next1&#39;&gt;
+&lt;&lt;speech&gt;&gt;Unsurprisingly, I find myself talking to a brick wall once again.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next2&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Well just be careful, I don’t know what they’ll do next.
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next3&#39;&gt;
+&lt;&lt;speech&gt;&gt;I say, walking away, disgruntled.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;inventory&quot;&gt;
+&lt;&lt;link &#39;Check Inventory&#39;&gt;&gt;
+    &lt;&lt;dialog&#39;Inventory&#39;&gt;&gt;
+        You are carrying &lt;&lt;=$player.count()&gt;&gt; items in your inventory.
+        &lt;&lt;linkedinventory &#39; &#39; &#39;$player&#39; &#39;$container&#39;&gt;&gt;
+    &lt;&lt;/dialog&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;/div&gt;
+&lt;&lt;if $player.count() &gt; 4 &gt;&gt;
+&lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="67" name="Show V the Key" tags="" position="1463,3578" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;type 20ms&gt;&gt;I approach V and show her the key that I found earlier in the theatre.
+
+&lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
+    &lt;img src=&quot;images/chestKey Rusted.png&quot; alt=&quot;key&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+&lt;/figure&gt;
+&lt;&lt;/type&gt;&gt;
+&lt;/section&gt;
+&lt;&lt;set $accomplished_mission.add(&quot;ShowVKey&quot;)&gt;&gt;
+&lt;&lt;set _show to { start: 0, end: 2}&gt;&gt;
+&lt;div class= &quot;hide&quot; id=&#39;next0&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Do you know where this might go?
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class = &quot;hide&quot; id=&#39;next1&#39;&gt;
+&lt;&lt;speech&gt;&gt;V says nothing, and hardly acknowledges that I even spoke.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class= &quot;hide&quot; id=&#39;next2&#39;&gt;
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;
+Well then...
+&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;inventory&quot;&gt;
+&lt;&lt;link &#39;Check Inventory&#39;&gt;&gt;
+    &lt;&lt;dialog&#39;Inventory&#39;&gt;&gt;
+        You are carrying &lt;&lt;=$player.count()&gt;&gt; items in your inventory.
+        &lt;&lt;linkedinventory &#39; &#39; &#39;$player&#39; &#39;$container&#39;&gt;&gt;
+    &lt;&lt;/dialog&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;/div&gt;
+&lt;&lt;if $player.count() &gt; 4 &gt;&gt;
+&lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
 </tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
