@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Green&#39;s Seven Guests" startnode="25" creator="Twine" creator-version="2.3.14" ifid="0CB710AC-D55A-4996-9C02-DE0CBFCF062B" zoom="1" format="SugarCube" format-version="2.34.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* SugarCube */
+	<tw-storydata name="Green&#39;s Seven Guests" startnode="43" creator="Twine" creator-version="2.3.14" ifid="0CB710AC-D55A-4996-9C02-DE0CBFCF062B" zoom="1" format="SugarCube" format-version="2.34.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* SugarCube */
 
 /* Fonts - Start */
 @import url("https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise:30");
@@ -1262,11 +1262,42 @@ Macro.add('dialogclose', {
 </tw-passagedata><tw-passagedata pid="3" name="StoryInit" tags="" position="427,71" size="100,100">&lt;&lt;newinventory &#39;$player&#39;&gt;&gt;
 &lt;&lt;newinventory &#39;$container&#39; &#39;hammer&#39; &#39;knife&#39;&gt;&gt;
 &lt;&lt;set $accomplished_mission = new Set()&gt;&gt;
-&lt;&lt;set $talkedWithWilliam = false&gt;&gt;
+
 &lt;&lt;set $exploredTheatre = false&gt;&gt;
+&lt;&lt;set $exploredStage = false&gt;&gt;
 &lt;&lt;set $exploredUpstairs = false&gt;&gt;
 &lt;&lt;set $exploredKitchen = false&gt;&gt;
 &lt;&lt;set $exploredDiningHall = false&gt;&gt;
+&lt;&lt;set $exploredGuestRoom = false&gt;&gt;
+&lt;&lt;set $exploredGameRoom = false&gt;&gt;
+&lt;&lt;set $exploredMasterBedroom = false&gt;&gt;
+&lt;&lt;set $exploredStudyRoom = false&gt;&gt;
+&lt;&lt;set $exploredWineCellar = false&gt;&gt;
+
+&lt;&lt;set $talkedWithWilliamPhoto = false&gt;&gt;
+&lt;&lt;set $talkedWithWilliamKey = false&gt;&gt;
+&lt;&lt;set $talkedWithWilliamKnife = false&gt;&gt;
+&lt;&lt;set $talkedWithWilliamNecklace = false&gt;&gt;
+
+&lt;&lt;set $talkedWithLucyKey = false&gt;&gt;
+&lt;&lt;set $talkedWithLucyNecklace = false&gt;&gt;
+&lt;&lt;set $talkedWithLucyKnife = false&gt;&gt;
+
+&lt;&lt;set $talkedWithGluttonyCloth = false&gt;&gt;
+&lt;&lt;set $talkedWithGluttonyKey = false&gt;&gt;
+&lt;&lt;set $talkedWithGluttonyNecklace = false&gt;&gt;
+&lt;&lt;set $talkedWithGluttonyKnife = false&gt;&gt;
+
+&lt;&lt;set $talkedWithPiperKey = false&gt;&gt;
+&lt;&lt;set $talkedWithPiperNecklace = false&gt;&gt;
+&lt;&lt;set $talkedWithPiperKnife = false&gt;&gt;
+
+&lt;&lt;set $talkedWithVKey = false&gt;&gt;
+&lt;&lt;set $talkedWithVNecklace = false&gt;&gt;
+&lt;&lt;set $talkedWithVKnife = false&gt;&gt;
+
+
+
 &lt;&lt;cacheaudio &quot;start_music&quot; &quot;music/I-Knew-a-Guy.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;death_music&quot; &quot;music/GreenDeath.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;letter_music&quot; &quot;music/LetterOpen.wav&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Green Dialogue" tags="" position="488,724" size="100,100">&lt;div&gt;
@@ -1767,7 +1798,7 @@ Well, I guess it’s my turn.
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Dining Hall]]&gt;&gt;
-&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="MainEntrance" tags="" position="1072,3100" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="MainEntrance" tags="" position="1084,3180" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\ This is the main entrance for the mansion, it seems to connect many different areas of the mansion. 
 
 It&#39;s just William and I at the main entrance.
@@ -1785,12 +1816,18 @@ It&#39;s just William and I at the main entrance.
 &lt;&lt;if $exploredKitchen&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Go to Kitchen&#39;|Kitchen]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Go to Kitchen&#39;|Kitchen]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $exploredTheatre&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Go to Theatre&#39;|Theatre]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Go to Theatre&#39;|Theatre]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $exploredUpstairs&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Go Upstairs&#39;|Upstairs]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Go Upstairs&#39;|Upstairs]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+
 &lt;&lt;nobr&gt;&gt;
-&lt;&lt;if not $talkedWithWilliam &amp;&amp; $player.has(&#39;Photo&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show William the Photo&#39;|Show William Photo]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $talkedWithWilliam &amp;&amp; $player.has(&#39;Necklace&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show William the Necklace&#39;|Show William Necklace]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $talkedWithWilliam &amp;&amp; $player.has(&#39;Knife&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show William the Knife&#39;|Show William Knife]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $talkedWithWilliam &amp;&amp; $player.has(&#39;Chest Key&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show William the Key&#39;|Show William the Key]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $player.has(&#39;Photo&#39;)&gt;&gt;&lt;&lt;if $talkedWithWilliamPhoto&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Show William the Photo&#39;|Show William Photo]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Show William the Photo&#39;|Show William Photo]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $player.has(&#39;Necklace&#39;)&gt;&gt;&lt;&lt;if $talkedWithWilliamPhoto &amp;&amp; $talkedWithWilliamNecklace&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Show William the Necklace&#39;|Show William Necklace]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Show William the Necklace&#39;|Show William Necklace]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $player.has(&#39;Chest Key&#39;)&gt;&gt;&lt;&lt;if $talkedWithWilliamPhoto &amp;&amp; $talkedWithWilliamKey&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Show William the the Key&#39;|Show William the Key]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Show William the Key&#39;|Show William the Key]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $player.has(&#39;Knife&#39;)&gt;&gt;&lt;&lt;if $talkedWithWilliamPhoto &amp;&amp; $talkedWithWilliamKnife&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Show William the Knife&#39;|Show William Knife]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Show William the Knife&#39;|Show William Knife]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;
+
 &lt;&lt;/nobr&gt;&gt;
+
 &lt;/div&gt;&lt;/div&gt;
 
 &lt;div class=&quot;inventory&quot;&gt;
@@ -1801,11 +1838,11 @@ It&#39;s just William and I at the main entrance.
     &lt;&lt;/dialog&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
-&lt;&lt;if $player.count() &gt; 0 &gt;&gt;
+&lt;&lt;if $player.count() &gt; 4 &gt;&gt;
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="26" name="Theatre" tags="" position="313,3319" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="26" name="Theatre" tags="" position="229,3296" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Walking into the entryway of the theatre, I am not surprised to see an expansive row of seats coupled with a lifted platform, presumably for performers. The stage is about thirty metres ahead of me.
 The area is very dimly lit by a few candles, and I cannot see what’s on the stage at all.
 As I get closer to the stage, I hear the soft sounds of sniffling and crying.
@@ -1827,7 +1864,10 @@ As they run away, I hear something metallic hit the ground. The running stops fo
 
 &lt;div class=&quot;hide&quot; id =&quot;next2&quot;&gt;
 &lt;div class=&quot;gameDialog&quot;&gt;Current Location: Theatre
-&lt;&lt;link [[&#39;Go to Stage&#39;|Stage]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+
+&lt;&lt;if $exploredStage&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Go Stage&#39;|Stage]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Go Stage&#39;|Stage]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+
+
 &lt;&lt;link [[&#39;Go back to Main Entrance&#39;|MainEntrance]]&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
 
@@ -1844,7 +1884,7 @@ As they run away, I hear something metallic hit the ground. The running stops fo
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;set $exploredTheatre = true&gt;&gt;
-</tw-passagedata><tw-passagedata pid="27" name="Green1" tags="" position="1321,2986" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="27" name="Green1" tags="" position="1310,2893" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Upon inspection of Mr. Green’s corpse, I noticed a torn piece of fine red cloth under one of the legs of the chair. It seems as though something was stuck under it, and ripped off once it was moved.
 While it doesn’t immediately ring any bells, I can’t help but have a sneaking suspicion that I’ve seen this before.
 &lt;&lt;/type&gt;&gt;
@@ -2011,18 +2051,25 @@ SOME TEXT ABOUT THE CLOTH
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="35" name="Upstairs" tags="" position="857,3322" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="35" name="Upstairs" tags="" position="888,3333" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\There are four rooms upstairs.
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
 
 &lt;div class=&quot;hide&quot; id =&quot;next0&quot;&gt;
 &lt;div class=&quot;gameDialog&quot;&gt;Current Location: Upstairs
-&lt;&lt;link [[&#39;Go to Study Room&#39;|StudyRoom]]&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link [[&#39;Go to Guest Room&#39;|GuestRoom]]&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link [[&#39;Go to Master Bedroom&#39;|MasterBedroom]]&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link [[&#39;Go to Game Room&#39;|Game Room]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+
+&lt;&lt;if $exploredStudyRoom&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Go to Study Room&#39;|StudyRoom]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Go to Study Room&#39;|StudyRoom]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $exploredGuestRoom&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Go to Guest Room&#39;|GuestRoom]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Go to Guest Room&#39;|GuestRoom]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $exploredMasterBedroom&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Go to Master Bedroom&#39;|MasterBedroom]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Go to Master Bedroom&#39;|MasterBedroom]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $exploredGameRoom&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Go to Game Room&#39;|GameRoom]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Go to Game Room&#39;|GameRoom]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+
 &lt;&lt;link [[&#39;Go back to Main Entrance&#39;|MainEntrance]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+
+
 &lt;/div&gt;&lt;/div&gt;
 
 
@@ -2039,7 +2086,7 @@ SOME TEXT ABOUT THE CLOTH
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;set $exploredUpstairs = true&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="Kitchen" tags="" position="1294,3430" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;set $exploredUpstairs = true&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="Kitchen" tags="" position="1222,3346" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Upon entering the kitchen, you are greeted by a huge array of dishes, covering every countertop you can see, all filled with various desserts that never made it to the dinner table
 
 It&#39;s just V and I in this room.
@@ -2064,13 +2111,23 @@ It&#39;s just V and I in this room.
 
 &lt;div class=&quot;hide&quot; id =&quot;next2&quot;&gt;
 &lt;div class=&quot;gameDialog&quot;&gt;Current Location: Kitchen
-&lt;&lt;link [[&#39;Investigate Wine Cellar&#39;|WineCellar]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+
+&lt;&lt;if $exploredWineCellar&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Investigate Wine Cellar&#39;|WineCellar]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Investigate Wine Cellar&#39;|WineCellar]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+
 &lt;&lt;link [[&#39;Go back to Main Entrance&#39;|MainEntrance]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+
 &lt;&lt;nobr&gt;&gt;
-&lt;&lt;if $player.has(&#39;Chest Key&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show V the Key&#39;|Show V the Key]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $player.has(&#39;Necklace&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show V the Necklace&#39;|Show V Necklace]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $player.has(&#39;Knife&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show V the Knife&#39;|Show V Knife]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $player.has(&#39;Necklace&#39;)&gt;&gt;&lt;&lt;if $talkedWithVNecklace&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Show V the Necklace&#39;|Show V Necklace]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Show V the Necklace&#39;|Show V Necklace]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $player.has(&#39;Chest Key&#39;)&gt;&gt;&lt;&lt;if $talkedWithVKey&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Show V the Key&#39;|Show V the Key]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Show V the Key&#39;|Show V the Key]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $player.has(&#39;Knife&#39;)&gt;&gt;&lt;&lt;if $talkedWithVKnife&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Show V the Knife&#39;|Show V Knife]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Show V the Knife&#39;|Show V Knife]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
+
+
+
+
+
 &lt;/div&gt;
 
 
@@ -2086,7 +2143,7 @@ It&#39;s just V and I in this room.
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;set $exploredKitchen = true&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="Stage" tags="" position="297,3460" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;set $exploredKitchen = true&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="Stage" tags="" position="227,3437" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\I ran toward the stage, stopping at the final row of seats, to see that I am the only one in the theatre.
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
@@ -2129,7 +2186,8 @@ It&#39;s just V and I in this room.
 &lt;&lt;/if&gt;&gt;
 
 &lt;div id=&quot;continue&quot;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="38" name="Chest Key" tags="" position="264,3628" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;set $exploredStage = true&gt;&gt;
+</tw-passagedata><tw-passagedata pid="38" name="Chest Key" tags="" position="224,3590" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;&lt;&lt;if not $player.has(&#39;Chest Key&#39;)&gt;&gt; \I look around the stage, and see a very small decorative key on the floor.
 &lt;&lt;/if&gt;&gt;&lt;&lt;if $player.has(&#39;Chest Key&#39;)&gt;&gt;\This was where I found the small decorative key, it looks too small to fit a door, I wonder where it could be used.&lt;&lt;/if&gt;&gt;
 
@@ -2143,7 +2201,7 @@ It&#39;s just V and I in this room.
 
 
 &lt;&lt;if not $player.has(&#39;Chest Key&#39;)&gt;&gt;  
-&lt;&lt;set _show to { start: 0, end: 3}&gt;&gt;
+&lt;&lt;set _show to { start: 0, end: 4}&gt;&gt;
 &lt;div class = &quot;hide&quot; id=&#39;next0&#39;&gt;
 &lt;&lt;speech &quot;Silas&quot;&gt;&gt;Is this the source of that sound I heard earlier?
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
@@ -2161,6 +2219,10 @@ It&#39;s just V and I in this room.
 &lt;div class = &quot;hide&quot; id=&#39;next3&#39;&gt;
 &lt;&lt;speech &quot;Silas&quot;&gt;&gt;I wonder where it goes…
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+&lt;div class = &quot;hide&quot; id=&#39;next4&#39;&gt;
+&lt;div class=&quot;gameDialog&quot;&gt;Current Location: Stage
+&lt;&lt;link [[&#39;Go back to Main Entrance&#39;|MainEntrance]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 
 &lt;&lt;if $player.has(&#39;Chest Key&#39;)&gt;&gt;
@@ -2185,8 +2247,8 @@ It&#39;s just V and I in this room.
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="39" name="StudyRoom" tags="" position="610,3521" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="39" name="StudyRoom" tags="" position="404,3500" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\As I enter the room, I’m hit with a wave of dust. It’s clear no one’s been in here for quite a while.
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
@@ -2215,7 +2277,9 @@ It&#39;s just V and I in this room.
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;div id=&quot;continue&quot;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="GuestRoom" tags="" position="757,3538" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;div id=&quot;continue&quot;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
+&lt;&lt;set $exploredStudyRoom = true&gt;&gt;
+</tw-passagedata><tw-passagedata pid="40" name="GuestRoom" tags="" position="600,3495" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Looking around the room, I don’t see much, only a few spare beds and lanterns.
 
 It&#39;s just Piper and I in this room.
@@ -2239,11 +2303,22 @@ It&#39;s just Piper and I in this room.
 &lt;div class=&quot;hide&quot; id =&quot;next2&quot;&gt;
 &lt;div class=&quot;gameDialog&quot;&gt;Current Location: Guest Room
 &lt;&lt;link [[&#39;Go back to Upstairs&#39;|Upstairs]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+
+
+
+
 &lt;&lt;nobr&gt;&gt;
-&lt;&lt;if $player.has(&#39;Necklace&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show Piper the Necklace&#39;|Show Piper Necklace]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $player.has(&#39;Knife&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show Piper the Knife&#39;|Show Piper Knife]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $player.has(&#39;Chest Key&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show Piper the Key&#39;|Show Piper the Key]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $player.has(&#39;Necklace&#39;)&gt;&gt;&lt;&lt;if $talkedWithPiperNecklace&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Show Piper Necklace&#39;|Show Piper Necklace]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Show Piper Necklace&#39;|Show Piper Necklace]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $player.has(&#39;Chest Key&#39;)&gt;&gt;&lt;&lt;if $talkedWithPiperKey&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Show Piper the Key&#39;|Show Piper the Key]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Show Piper the Key&#39;|Show Piper the Key]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $player.has(&#39;Knife&#39;)&gt;&gt;&lt;&lt;if $talkedWithPiperKnife&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Show Piper Knife&#39;|Show Piper Knife]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Show Piper Knife&#39;|Show Piper Knife]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
+
+
+
+
+
 &lt;/div&gt;
 
 &lt;div class=&quot;inventory&quot;&gt;
@@ -2258,7 +2333,8 @@ It&#39;s just Piper and I in this room.
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="41" name="MasterBedroom" tags="" position="918,3559" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;set $exploredGuestRoom = true&gt;&gt;
+</tw-passagedata><tw-passagedata pid="41" name="MasterBedroom" tags="" position="831,3527" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Walking up to the Master Bedroom, I see that the lock to the door looks as though something has broken it, as it is miss-shapen.
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
@@ -2294,7 +2370,8 @@ It&#39;s just Piper and I in this room.
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="42" name="Desk" tags="" position="613,3654" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;set $exploredMasterBedroom = true&gt;&gt;
+</tw-passagedata><tw-passagedata pid="42" name="Desk" tags="" position="403,3632" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\As I looked around to see what the room has to offer, I noticed a picture in one of the desk drawers.
 Looking through the desk drawers, I find a picture of Mr. Green and
 Wrath, smiling at the camera.
@@ -2337,7 +2414,7 @@ Wrath, smiling at the camera.
 &lt;/div&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Photo]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="43" name="Photo" tags="" position="577,3814" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="43" name="Photo" tags="" position="382,3770" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\I state in shock, realising the situation.
 It occurred to me that Mr. Green and William, while being the leaders of competing companies, never truly got in the way of one another. This was very odd for the two companies, as they both offered practically the same
 thing.
@@ -2366,15 +2443,13 @@ But now I realise…
 &lt;&lt;speech &quot;Silas&quot;&gt;&gt;I bet William wouldn’t want me to have this picture…
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
+&lt;div class=&quot;hide&quot; id =&quot;next3&quot;&gt;
+&lt;div class=&quot;gameDialog&quot;&gt;
+&lt;&lt;link [[&#39;Go back to Upstairs&#39;|Upstairs]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;/div&gt;
+
+
 &lt;&lt;/if&gt;&gt;
-
-&lt;&lt;else&gt;&gt;
-&lt;div class = &quot;hide&quot; id=&#39;next3&#39;&gt;
-&lt;&lt;speech &quot;Silas&quot;&gt;&gt; I think I have already discovered here...
-&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
-&lt;/&lt;else&gt;&gt;
-
-
 
 &lt;div class=&quot;inventory&quot;&gt;
 &lt;&lt;link &#39;Check Inventory&#39;&gt;&gt;
@@ -2389,11 +2464,13 @@ But now I realise…
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;div class=&quot;hide&quot; id =&quot;next4&quot;&gt;
+
+&lt;&lt;if $player.has(&#39;Photo&#39;)&gt;&gt;  
+&lt;div class=&quot;hide&quot; id =&quot;next1&quot;&gt;
 &lt;div class=&quot;gameDialog&quot;&gt;
 &lt;&lt;link [[&#39;Go back to Upstairs&#39;|Upstairs]]&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="44" name="InvestigateBedroom" tags="" position="875,3709" size="100,100">&lt;&lt;if $player.count() &lt; 3 &gt;&gt;  
+</tw-passagedata><tw-passagedata pid="44" name="InvestigateBedroom" tags="" position="805,3716" size="100,100">&lt;&lt;if $player.count() &lt; 3 &gt;&gt;  
 &lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Put a room photo here~
 &lt;&lt;/type&gt;&gt;
@@ -2451,7 +2528,7 @@ But now I realise…
 &lt;&lt;/if&gt;&gt;
 
 
-</tw-passagedata><tw-passagedata pid="45" name="Knife" tags="" position="915,3918" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="45" name="Knife" tags="" position="810,3850" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Looking through the room, you see a picture impaled on a wooden pillar by a small ornate knife, stained in blood. The knife has a small ruby in the hilt.
 
 &lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
@@ -2523,7 +2600,7 @@ I take the knife out of the wall, letting the picture fall to the floor.
 &lt;&lt;speech&gt;&gt;&lt;&lt;link [[&#39;Go back Upstairs&#39;|Upstairs]]&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 ​
-</tw-passagedata><tw-passagedata pid="46" name="Game Room" tags="" position="1153,3557" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="46" name="GameRoom" tags="" position="1020,3504" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\Upon entering the games room, I see smashed gambling tables, strewn card sets, and overturned chairs. However, it appears that this is the only part of the room destroyed, as I see the bar, lounge area, and pool tables untouched.
 
 It&#39;s just Lucy and I in this room.
@@ -2551,12 +2628,18 @@ It&#39;s just Lucy and I in this room.
 &lt;div class=&quot;hide&quot; id =&quot;next3&quot;&gt;
 &lt;div class=&quot;gameDialog&quot;&gt;Current Location: Game Room
 &lt;&lt;link [[&#39;Go back to Upstairs&#39;|Upstairs]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+
 &lt;&lt;nobr&gt;&gt;
-&lt;&lt;if $player.has(&#39;Necklace&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show Lucy the Necklace&#39;|Show Lucy Necklace]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $player.has(&#39;Knife&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show Lucy the Knife&#39;|Show Lucy Knife]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $player.has(&#39;Chest Key&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show Lucy the Key&#39;|Show Lucy the Key]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $player.has(&#39;Necklace&#39;)&gt;&gt;&lt;&lt;if $talkedWithLucyNecklace&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Show Lucy the Necklace&#39;|Show Lucy Necklace]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Show Lucy the Necklace&#39;|Show Lucy Necklace]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $player.has(&#39;Chest Key&#39;)&gt;&gt;&lt;&lt;if $talkedWithLucyKey&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Show Lucy the Key&#39;|Show Lucy the Key]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Show Lucy the Key&#39;|Show Lucy the Key]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $player.has(&#39;Knife&#39;)&gt;&gt;&lt;&lt;if $talkedWithLucyKnife&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Show Lucy the Knife&#39;|Show Lucy Knife]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Show Lucy the Knife&#39;|Show Lucy Knife]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
+
+
 &lt;/div&gt;
+
 
 &lt;div class=&quot;inventory&quot;&gt;
 &lt;&lt;link &#39;Check Inventory&#39;&gt;&gt;
@@ -2570,7 +2653,8 @@ It&#39;s just Lucy and I in this room.
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="47" name="WineCellar" tags="" position="1335,3641" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;set $exploredGameRoom = true&gt;&gt;
+</tw-passagedata><tw-passagedata pid="47" name="WineCellar" tags="" position="1343,3476" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\As I descend the staircase into the cellar, I see a wall of casks, presumably filled with various wines.
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
@@ -2609,6 +2693,7 @@ It&#39;s just Lucy and I in this room.
 &lt;div class=&quot;gameDialog&quot;&gt;Current Location: Wine Cellar
 &lt;&lt;link [[&#39;Go back to Dining Hall&#39;|MainEntrance]]&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
+&lt;&lt;set $exploredWineCellar = true&gt;&gt;
 
 
 
@@ -2624,7 +2709,7 @@ It&#39;s just Lucy and I in this room.
 &lt;div id=&quot;chooseCulprit&quot;&gt;&lt;&lt;link [[&#39;Choose Culprit&#39;|Choose Culprit]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="48" name="InvestigateChest" tags="" position="1436,3760" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="48" name="InvestigateChest" tags="" position="1352,3637" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\I wonder if that key I got earlier would fit this lock.
 I put the key I found in the theatre in the lock with a satisfying click.
 Inside the chest, I find a pearl necklace and an assortment of
@@ -2643,7 +2728,7 @@ a few specific words and phrases.
 &lt;/section&gt;
 
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Necklace]]&gt;&gt;
-&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="49" name="Necklace" tags="" position="1335,3942" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;/link&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="49" name="Necklace" tags="" position="1367,3828" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\As I move down the pile, it seems half of the letters aren’t even opened.
 The necklace, however, still shines bright as day.
 
@@ -2737,12 +2822,19 @@ It&#39;s just Georgia and I in this room.
 &lt;div class=&quot;gameDialog&quot;&gt;Current Location: Dining Hall
 &lt;&lt;link [[&#39;Go to Main Entrance&#39;|MainEntrance]]&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link [[&#39;Investigate Mr.Green&#39;|Green1]]&gt;&gt;&lt;&lt;/link&gt;&gt;
+
+
 &lt;&lt;nobr&gt;&gt;
-&lt;&lt;if $player.has(&#39;Necklace&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show Georgia the Necklace&#39;|Show Georgia Necklace]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $player.has(&#39;Knife&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show Georgia the Knife&#39;|Show Georgia Knife]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $player.has(&#39;Chest Key&#39;)&gt;&gt;&lt;&lt;link [[&#39;Show Georgia the Key&#39;|Show Georgia the Key]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $player.has(&#39;Necklace&#39;)&gt;&gt;&lt;&lt;if $talkedWithGluttonyNecklace&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Show Georgia Necklace&#39;|Show Georgia Necklace]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Show Georgia Necklace&#39;|Show Georgia Necklace]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $player.has(&#39;Chest Key&#39;)&gt;&gt;&lt;&lt;if $talkedWithGluttonyKey&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Show Georgia the Key&#39;|Show Georgia the Key]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Show Georgia the Key&#39;|Show Georgia the Key]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $player.has(&#39;Knife&#39;)&gt;&gt;&lt;&lt;if $talkedWithGluttonyKnife&gt;&gt;&lt;span class=&quot;explored&quot;&gt;&lt;&lt;link [[&#39;Show Georgia Knife&#39;|Show Georgia Knife]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [[&#39;Show Georgia Knife&#39;|Show Georgia Knife]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
+
+
 &lt;/div&gt;&lt;/div&gt;
+
 
 &lt;div class=&quot;inventory&quot;&gt;
 &lt;&lt;link &#39;Check Inventory&#39;&gt;&gt;
@@ -2757,7 +2849,7 @@ It&#39;s just Georgia and I in this room.
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;set $exploredDiningHall = true&gt;&gt;
-</tw-passagedata><tw-passagedata pid="52" name="Show William Photo" tags="" position="849,3196" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+</tw-passagedata><tw-passagedata pid="52" name="Show William Photo" tags="" position="635,3210" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;I approach William and pull out the picture of him and Mr.Green.
 
 &lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
@@ -2839,7 +2931,8 @@ Excellent!
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="53" name="Show William Necklace" tags="" position="855,3082" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;set $talkedWithWilliamPhoto = true&gt;&gt;
+</tw-passagedata><tw-passagedata pid="53" name="Show William Necklace" tags="" position="514,3213" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;I approach William and show him the necklace.
 
 &lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
@@ -2895,7 +2988,8 @@ Okay, thanks.
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="54" name="Show William Knife" tags="" position="1257,3107" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;set $talkedWithWilliamNecklace = true&gt;&gt;
+</tw-passagedata><tw-passagedata pid="54" name="Show William Knife" tags="" position="746,3201" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;I approach William and show him the bloody knife.
 
 &lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
@@ -2969,7 +3063,8 @@ Alright then.
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="55" name="Show William the Key" tags="" position="1303,3254" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;set $talkedWithWilliamKnife = true&gt;&gt;
+</tw-passagedata><tw-passagedata pid="55" name="Show William the Key" tags="" position="870,3195" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;I approach William and show him the key that I found earlier in the theatre.
 
 &lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
@@ -3027,7 +3122,8 @@ Guess not...
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="56" name="Show Lucy Necklace" tags="" position="1038,3708" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;set $talkedWithWilliamKey = true&gt;&gt;
+</tw-passagedata><tw-passagedata pid="56" name="Show Lucy Necklace" tags="" position="955,3653" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;I approach Lucy and show her the necklace.
 
 &lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
@@ -3068,7 +3164,8 @@ Okay, I’ll keep that in mind.
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="57" name="Show Lucy Knife" tags="" position="1155,3708" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;set $talkedWithLucyNecklace = true&gt;&gt;
+</tw-passagedata><tw-passagedata pid="57" name="Show Lucy Knife" tags="" position="1062,3653" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;I approach Lucy and show her the bloody knife.
 
 &lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
@@ -3134,7 +3231,8 @@ I see...all good.
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="58" name="Show Lucy the Key" tags="" position="1275,3761" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;set $talkedWithLucyKnife = true&gt;&gt;
+</tw-passagedata><tw-passagedata pid="58" name="Show Lucy the Key" tags="" position="950,3762" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;I approach Lucy and show her the key that I found earlier in the theatre.
 
 &lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
@@ -3143,7 +3241,7 @@ I see...all good.
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
 &lt;&lt;set $accomplished_mission.add(&quot;ShowLucyKey&quot;)&gt;&gt;
-&lt;&lt;set _show to { start: 0, end: 7}&gt;&gt;
+&lt;&lt;set _show to { start: 0, end: 2}&gt;&gt;
 &lt;div class= &quot;hide&quot; id=&#39;next0&#39;&gt;
 &lt;&lt;speech &quot;Silas&quot;&gt;&gt;
 Do you know where this might go?
@@ -3172,7 +3270,8 @@ Alright, thanks for the help
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="59" name="Show Georgia Necklace" tags="" position="913,2880" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;set $talkedWithLucyKey = true&gt;&gt;
+</tw-passagedata><tw-passagedata pid="59" name="Show Georgia Necklace" tags="" position="754,2893" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;I approach Georgia and show her the necklace.
 
 &lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
@@ -3230,7 +3329,8 @@ Hmm, that’s actually pretty useful, thanks.
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="60" name="Show Georgia Knife" tags="" position="853,3000" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;set $talkedWithGluttonyNecklace = true&gt;&gt;
+</tw-passagedata><tw-passagedata pid="60" name="Show Georgia Knife" tags="" position="753,2998" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;I approach Georgia and show her the bloody knife.
 
 &lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
@@ -3288,7 +3388,8 @@ That’s true...makes it hard to narrow down. Thanks a lot.
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="61" name="Show Georgia the Key" tags="" position="1200,2861" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;set $talkedWithGluttonyKnife = true&gt;&gt;
+</tw-passagedata><tw-passagedata pid="61" name="Show Georgia the Key" tags="" position="879,2894" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;I approach Georgia and show her the key that I found earlier in the theatre.
 
 &lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
@@ -3330,7 +3431,8 @@ That’s a good point, thanks.
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="62" name="Show Piper Necklace" tags="" position="915,3436" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;set $talkedWithGluttonyKey = true&gt;&gt;
+</tw-passagedata><tw-passagedata pid="62" name="Show Piper Necklace" tags="" position="676,3629" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;I approach Piper and show her the necklace.
 
 &lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
@@ -3381,7 +3483,8 @@ That’s true, I won’t point fingers just yet.
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="63" name="Show Piper Knife" tags="" position="757,3688" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;set $talkedWithPiperNecklace = true&gt;&gt;
+</tw-passagedata><tw-passagedata pid="63" name="Show Piper Knife" tags="" position="553,3636" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;I approach Piper and show her the bloody knife.
 
 &lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
@@ -3438,7 +3541,8 @@ Good points all around.
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="64" name="Show Piper the Key" tags="" position="645,3397" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;set $talkedWithPiperKnife = true&gt;&gt;
+</tw-passagedata><tw-passagedata pid="64" name="Show Piper the Key" tags="" position="557,3747" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;I approach Piper and show her the key that I found earlier in the theatre.
 
 &lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
@@ -3493,7 +3597,8 @@ Hopefully later when we pin the suspect down.
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="65" name="Show V Necklace" tags="" position="1160,3436" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;set $talkedWithPiperKey = true&gt;&gt;
+</tw-passagedata><tw-passagedata pid="65" name="Show V Necklace" tags="" position="1198,3489" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;I approach V and show her the necklace.
 
 &lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
@@ -3532,7 +3637,8 @@ Doesn’t look like something you’d wear, but just thought I’d ask.
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="66" name="Show V Knife" tags="" position="1476,3434" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;set $talkedWithVNecklace = true&gt;&gt;
+</tw-passagedata><tw-passagedata pid="66" name="Show V Knife" tags="" position="1200,3601" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;I approach V and show her the bloody knife.
 
 &lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
@@ -3571,7 +3677,8 @@ Well just be careful, I don’t know what they’ll do next.
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="67" name="Show V the Key" tags="" position="1463,3578" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
+&lt;&lt;set $talkedWithVKnife = true&gt;&gt;
+</tw-passagedata><tw-passagedata pid="67" name="Show V the Key" tags="" position="1195,3718" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;I approach V and show her the key that I found earlier in the theatre.
 
 &lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
@@ -3607,6 +3714,7 @@ Well then...
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;return &quot;Return&quot;&gt;&gt;&lt;/div&gt;
+&lt;&lt;set $talkedWithVKey = true&gt;&gt;
 </tw-passagedata><tw-passagedata pid="68" name="Incorrect Decision 2" tags="" position="1538,3146" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;\As you explain your findings to the group, it appears that people are losing interest in your discussion. 
 Some people start side-eyeing each other, and you feel that your explanation is a bit lacking.
