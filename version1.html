@@ -406,6 +406,20 @@ a:hover {
 	background-image: URL("images/lustCropped.png");
     border-color: #9980FA;
 }
+
+
+.LucyNo {
+  	color: #9980FA;
+    border: 2px solid #9980FA;
+  	text-shadow: 0px 0px 20px #D980FA;
+  	filter: brightness(1.2);
+}
+.LucyNo .avatar {
+	background-image: URL("images/Lust(NO NECKLACE).png");
+    border-color: #9980FA;
+}
+
+
 .Silas {
   	color:  #e6b800;
   	text-shadow: 0px 0px 20px #feca57;
@@ -2351,7 +2365,7 @@ Looking through the desk drawers, I find a picture of Mr. Green and
 William, smiling at the camera.&lt;&lt;else&gt;&gt;This was the room where I found the photo of Mr.Green and William together smiling at the camera.&lt;&lt;/if&gt;&gt;
 
 &lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
-    &lt;img src=&quot;images/croppedWrath.png&quot; alt=&quot;photo&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+    &lt;img src=&quot;images/Photo.png&quot; alt=&quot;photo&quot; width=&quot;300&quot; height=&quot;300&quot;&gt;
 &lt;/figure&gt;
 
 &lt;&lt;/type&gt;&gt;
@@ -2548,7 +2562,7 @@ But now I realise…
 
 It&#39;s just Lucy and I in this room.
 &lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
-    &lt;img src=&quot;images/Lust_v1.png&quot; alt=&quot;Lucy&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+    &lt;img src=&quot;images/Lust(NO NECKLACE).png&quot; alt=&quot;Lucy&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
 	&lt;img src=&quot;images/Sloth.png&quot; alt=&quot;Silas&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
 &lt;/figure&gt;
 &lt;&lt;/type&gt;&gt;
@@ -2598,8 +2612,10 @@ It&#39;s just Lucy and I in this room.
 </tw-passagedata><tw-passagedata pid="47" name="WineCellar" tags="" position="1342,3476" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
 &lt;&lt;type 20ms&gt;&gt;&lt;&lt;if not $player.has(&#39;Necklace&#39;)&gt;&gt;\As I descend the staircase into the cellar, I see a wall of casks, presumably filled with various wines.&lt;&lt;else&gt;&gt;\This is the cellar filled with various wines and the location where I found the chest with the bloody necklace and love letters.
 &lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
-    &lt;img src=&quot;images/Necklace.png&quot; alt=&quot;key&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+    &lt;img src=&quot;images/Necklace.png&quot; alt=&quot;necklace&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
 &lt;/figure&gt;
+
+
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
@@ -2665,10 +2681,9 @@ I put the key I found in the theatre in the lock with a satisfying click.
 Inside the chest, I find a pearl necklace and an assortment of
 letters.
 Looking through the letters, I find out that most have varying degrees of water damage on them, most likely from being in a moldy wet cellar for so long.
-Due to this, the letters are essentially unreadable, but I can make
-out a few words.
-It seems as if these were love letters, but this is only due to seeing
-a few specific words and phrases.
+&lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
+    &lt;img src=&quot;images/Necklace.png&quot; alt=&quot;necklace&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;&lt;/figure&gt;
+
 
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
@@ -2676,10 +2691,13 @@ a few specific words and phrases.
 &lt;div id=&quot;continue&quot; style=&#39;display:none&#39;&gt;&lt;&lt;link [[&#39;Continue&#39;|Necklace]]&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/div&gt;
 &lt;&lt;set $openedChest = true&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="Necklace" tags="" position="1367,3828" size="100,100">&lt;section class=&quot;storyDialog&quot;&gt;\
-&lt;&lt;type 20ms&gt;&gt;\As I move down the pile, it seems half of the letters aren’t even opened.
+&lt;&lt;type 20ms&gt;&gt;\Due to this, the letters are essentially unreadable, but I can make out a few words.
+It seems as if these were love letters, but this is only due to seeing
+a few specific words and phrases.
+As I move down the pile, it seems half of the letters aren’t even opened.
 The necklace, however, still shines bright as day.
 &lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
-    &lt;img src=&quot;images/Necklace.png&quot; alt=&quot;necklace&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;&lt;/figure&gt;
+    &lt;img src=&quot;images/LoveLetter.png&quot; alt=&quot;loveletter&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;&lt;/figure&gt;
 
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
@@ -2779,7 +2797,7 @@ It&#39;s just Georgia and I in this room.
 &lt;&lt;type 20ms&gt;&gt;I approach William and pull out the picture of him and Mr.Green.
 
 &lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
-    &lt;img src=&quot;images/bloodyKnife.png&quot; alt=&quot;key&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+    &lt;img src=&quot;images/Photo.png&quot; alt=&quot;key&quot; width=&quot;300&quot; height=&quot;300&quot;&gt;
 &lt;/figure&gt;
 &lt;&lt;/type&gt;&gt;
 &lt;/section&gt;
@@ -3068,7 +3086,7 @@ Do you know who this might belong to?
 &lt;&lt;speech&gt;&gt;Lucy looks at the necklace, and then back at me.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next2&#39;&gt;
-&lt;&lt;speech &quot;Lucy&quot;&gt;&gt;
+&lt;&lt;speech &quot;LucyNo&quot;&gt;&gt;
 This is pretty expensive...I don’t really know, but I would assume V, as they’ve been pretty secretive all night.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
@@ -3102,7 +3120,7 @@ Okay, I’ll keep that in mind.
 &lt;&lt;set $accomplished_mission.add(&quot;ShowLucyKnife&quot;)&gt;&gt;
 &lt;&lt;set _show to { start: 0, end: 9}&gt;&gt;
 &lt;div class= &quot;hide&quot; id=&#39;next0&#39;&gt;
-&lt;&lt;speech &quot;Lucy&quot;&gt;&gt;
+&lt;&lt;speech &quot;LucyNo&quot;&gt;&gt;
 Is that-
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
@@ -3115,7 +3133,7 @@ Yup, looks like the murder weapon.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next3&#39;&gt;
-&lt;&lt;speech &quot;Lucy&quot;&gt;&gt;Wow...where did you find it?
+&lt;&lt;speech &quot;LucyNo&quot;&gt;&gt;Wow...where did you find it?
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class= &quot;hide&quot; id=&#39;next4&#39;&gt;
@@ -3127,7 +3145,7 @@ I found this hidden area in Mr. Green’s bedroom that had this knife in the wal
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next6&#39;&gt;
-&lt;&lt;speech &quot;Lucy&quot;&gt;&gt;
+&lt;&lt;speech &quot;LucyNo&quot;&gt;&gt;
 Wow...I had no idea he was so secretive.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
@@ -3135,7 +3153,7 @@ Wow...I had no idea he was so secretive.
 &lt;&lt;speech&gt;&gt;Lucy says with a shocked expression.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class= &quot;hide&quot; id=&#39;next8&#39;&gt;
-&lt;&lt;speech &quot;Lucy&quot;&gt;&gt;
+&lt;&lt;speech &quot;LucyNo&quot;&gt;&gt;
 Sorry, but I really have no idea other than that it looks expensive.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
@@ -3174,7 +3192,7 @@ Do you know where this might go?
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class = &quot;hide&quot; id=&#39;next1&#39;&gt;
-&lt;&lt;speech &quot;Lucy&quot;&gt;&gt;
+&lt;&lt;speech &quot;LucyNo&quot;&gt;&gt;
 Hmm..looks too small to go into a door. Might go into something else, although I can’t think of what.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
