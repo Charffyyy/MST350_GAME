@@ -1322,13 +1322,13 @@ Macro.add('dialogclose', {
 &lt;&lt;cacheaudio &quot;letter_music&quot; &quot;music/LetterOpen.wav&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Green Dialogue" tags="" position="488,724" size="100,100">&lt;div&gt;
 &lt;&lt;speech &quot;Green&quot;&gt;&gt;I&#39;m Green...&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
-&lt;&lt;button [[&quot;Lucy&quot;|Lucy Dialogue]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="letter" tags="" position="781,537" size="100,100">&lt;section class=&quot;paper&quot;&gt;\
+&lt;&lt;button [[&quot;Lucy&quot;|Lucy Dialogue]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="letter" tags="" position="781,536" size="100,100">&lt;section class=&quot;paper&quot;&gt;\
 	&lt;article class=&quot;paperheader&quot;&gt;
 														13 Eldersgrove Avenue
 															 Oxyn, Canada
 														September 7, 1837&lt;/article&gt;\
 	&lt;div class=&quot;papertext&quot;&gt;&#39;&#39;
-Dear &lt;&lt;print $name&gt;&gt;,
+Dear Mr. Atomic,
   I am so very pleased to invite you to my one-hundredth birthday this Friday evening!
   It has been a long time coming, but now that I have finally hit the big three figures, I “figured”
   that I ought to throw a little celebration with some of my closest friends.
@@ -1345,16 +1345,19 @@ Dear &lt;&lt;print $name&gt;&gt;,
 &lt;/section&gt;
 
 
-&lt;&lt;set _show to { start: 0, end: 2 }&gt;&gt;
+&lt;&lt;set _show to { start: 0, end: 3 }&gt;&gt;
 
 &lt;div id=&#39;next0&#39;&gt;
-&lt;&lt;speech &quot;Silas&quot;&gt;&gt;&quot;Thank you for the steady ride,” I say as the carriage driver leaves me at the base of the mansion.
+&lt;&lt;speech &quot;Silas&quot;&gt;&gt;Thank you for the steady ride.
 &lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class=&#39;hide&#39; id=&#39;next1&#39;&gt;
-&lt;&lt;speech&gt;&gt;Of course Sir. Is there anything else you desire?&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+&lt;&lt;speech &gt;&gt;I say as the carriage driver leaves me at the base of the mansion.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 &lt;div class=&#39;hide&#39; id=&#39;next2&#39;&gt;
+&lt;&lt;speech&gt;&gt;Of course Sir. Is there anything else you desire?&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
+
+&lt;div class=&#39;hide&#39; id=&#39;next3&#39;&gt;
 &lt;&lt;speech &quot;Silas&quot;&gt;&gt;No, I should be good, thanks. Have a safe return.&lt;&lt;/speech&gt;&gt;&lt;/div&gt;
 
 
@@ -2364,7 +2367,6 @@ It&#39;s just Piper and I in this room.
 &lt;&lt;type 20ms&gt;&gt;&lt;&lt;if not $player.has(&#39;Photo&#39;)&gt;&gt;\As I looked around to see what the room has to offer, I noticed a picture in one of the desk drawers.
 Looking through the desk drawers, I find a picture of Mr. Green and
 William, smiling at the camera.&lt;&lt;else&gt;&gt;This was the room where I found the photo of Mr.Green and William together smiling at the camera.&lt;&lt;/if&gt;&gt;
-
 &lt;figure class=&quot;half&quot; style=&quot;display:flex&quot;&gt;
     &lt;img class=&quot;centerImg&quot; src=&quot;images/Photo.png&quot; alt=&quot;photo&quot; width=&quot;300&quot; height=&quot;300&quot;&gt;
 &lt;/figure&gt;
